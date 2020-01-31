@@ -8,3 +8,7 @@ https://docs.google.com/document/d/1SSFvkg1nykHV6AsbwNrRrVHWKcIqb9XQm33SHm49jys/
 
 ##### A visual of one such box:
 Example: A new user sets up an account to receive a box every two weeks and is open to anything new...They might receive a box for Leather-working containing things like in this picture http://leatherworkforbeginners.com/wp-content/uploads/2018/04/how-to-start-leatherworking.png(689 kB)
+
+###### Domain Modeling
+
+![Image of Domain Modeling](DomainModeling.png)
