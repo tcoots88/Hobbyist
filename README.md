@@ -33,6 +33,20 @@ https://trello.com/c/3amkiffZ/2-user-stories
   - As a user I would like to be able to delete categories I no longer want.
 
   - As a user I would like to be able to see if my location is within the range for shipping
+  
+## Database Schemas
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255),
+  email VARCHAR(9,6),
+  frequency VARCHAR(255),
+  preferences VARCHAR(255),
+  FOREIGN KEY(reviews_id) REFERENCES users(id)
+);
+
+One-to-Many
+Primary Key Reviews ID
+reviews VARCHAR(255)
 
 
 ##### Link to Wireframe
