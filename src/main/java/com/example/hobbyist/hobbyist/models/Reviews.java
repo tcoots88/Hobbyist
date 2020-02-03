@@ -14,13 +14,11 @@ public class Reviews {
    @ManyToOne
    ApplicationUser applicationUser;
 
-
     public Reviews(ApplicationUser applicationUser, String body){
         this.applicationUser = applicationUser;
         this.body = body;
 
         }
-
 
         public Reviews(){
 
