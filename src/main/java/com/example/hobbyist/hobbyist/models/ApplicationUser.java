@@ -2,7 +2,7 @@ package com.example.hobbyist.hobbyist.models;
 
 public class ApplicationUser {
 
-     String username;
+    String username;
     String password;
     String firstName;
     String lastName;
