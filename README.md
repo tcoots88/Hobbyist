@@ -34,8 +34,8 @@ https://trello.com/c/3amkiffZ/2-user-stories
 
   - As a user I would like to be able to see if my location is within the range for shipping
   
- ``` 
 ## Database Schemas
+ ``` 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   username VARCHAR(255),
