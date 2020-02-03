@@ -19,18 +19,20 @@ public class ApplicationUser {
         return this.savedProductsList;
     }
 
-
     String username;
     String password;
-    String firstName;
     String lastName;
+    String firstName;
 
 
-    public ApplicationUser(String lastName, String firstName,String username, String password){
-        this.lastName = lastName;
-        this.firstName = firstName;
+
+    public ApplicationUser(String username,  String password,String lastName,String firstName){
         this.username = username;
         this.password = password;
+        this.lastName = lastName;
+        this.firstName = firstName;
+
+
 
     }
 
