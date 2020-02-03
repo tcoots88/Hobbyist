@@ -10,6 +10,12 @@ public class ApplicationUser {
     long Id;
 
 
+    String lastName;
+    String firstName;
+    String username;
+    String password;
+
+
     @OneToMany(mappedBy = "applicationUser")
     List<Products> savedProductsList;
 
@@ -19,20 +25,13 @@ public class ApplicationUser {
         return this.savedProductsList;
     }
 
-    String username;
-    String password;
-    String lastName;
-    String firstName;
 
 
-
-    public ApplicationUser(String username,  String password,String lastName,String firstName){
-        this.username = username;
-        this.password = password;
+  public ApplicationUser(String lastName, String firstName, String username, String password){
         this.lastName = lastName;
         this.firstName = firstName;
-
-
+        this.username = username;
+        this.password = password;
 
     }
 

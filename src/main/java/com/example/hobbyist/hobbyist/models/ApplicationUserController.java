@@ -17,7 +17,8 @@ public class ApplicationUserController {
 
     @PostMapping("/signup")
     public RedirectView createNewApplication(String lastName,String firstName, String username, String password){
-        ApplicationUser newUser = new ApplicationUser(username, passwordEncoder.encode(password),lastName, firstName);
+
+        ApplicationUser newUser = new ApplicationUser(lastName, firstName, username, passwordEncoder.encode(password));
         applicationUserRepository.save(newUser);
         return new RedirectView("/");
 
