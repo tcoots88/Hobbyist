@@ -26,12 +26,15 @@ Scope (In/Out)
 Minimum Viable Product vs
 
 What will your MVP functionality be?
-The user will be able to create a profile, sign in, and then select preferences.  
+1 - MVP will be a quality looking web application that allows users to create unique accounts with a username and password. 
+2 - Users should be able to choose a hobby box to order, as well as have the ability to save any favorites to a “saved” page on their account. 
+3 - Additionally, users should be able to view hobby box reviews.
+ 
 
 What are your stretch goals?
 Stretch
-Implementing a payment method with a service similiar to stripe. 
-Using a Websocket for users to interact. 
+1 - Implementing a payment method with a service similiar to stripe. 
+2 - Using a Websocket for users to interact. 
 
 
 
