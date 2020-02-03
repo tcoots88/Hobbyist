@@ -1,13 +1,16 @@
 package com.example.hobbyist.hobbyist.models;
 
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
+@Entity
 public class Products {
 
     String title;
     String description;
 
-
+    @javax.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    long Id;
     //this may need to change
     @ManyToOne
     ApplicationUser applicationUser;
