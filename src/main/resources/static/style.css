@@ -1,0 +1,107 @@
+
+
+#leatherWorking {
+   background: url(../images/leatherWorking.png);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+#woodCarving {
+   background: url(../images/Woodcarving.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+#pyrography {
+   background: url(../images/Pyrography.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+#bonkei {
+   background: url(../images/bonkei.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+#bonsai {
+   background: url(../images/bonsai.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+#fitness {
+   background: url(../images/fitness.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+#sewing {
+   background: url(../images/sewing.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+#candleMaking {
+   background: url(../images/CandleMaking.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+#jewelry {
+   background: url(../images/Jewelry.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+#puzzles {
+   background: url(../images/puzzles.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+#essentialOils {
+   background: url(../images/essentialOil.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+#tea {
+   background: url(../images/tea.jpg);
+   background-size: 300px, 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+
+.productDescription{
+   text-align: center;
+   color: blue;
+   list-style: none
+}
+#title{
+text-align: center;
+list-style: none
+}
+#parent{
+   grid-template-columns: auto, auto, auto;
+   /* grid-template-rows: 25% 100px auto; */
+   display: inline-flex;
+   flex-wrap: wrap;
+   list-style: none
+}
+
+
+.productDiv{
+   width: 400px;
+   height: 400px;
+}
