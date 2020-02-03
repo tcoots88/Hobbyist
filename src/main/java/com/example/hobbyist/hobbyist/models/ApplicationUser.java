@@ -11,13 +11,13 @@ public class ApplicationUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long Id;
 
+    String lastName;
+    String firstName;
     String username;
     String password;
-    String firstName;
-    String lastName;
 
 
-    public ApplicationUser(String lastName, String firstName,String username, String password){
+    public ApplicationUser(String lastName, String firstName, String username, String password){
         this.lastName = lastName;
         this.firstName = firstName;
         this.username = username;
