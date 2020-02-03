@@ -26,11 +26,11 @@ public class ApplicationUser {
     String lastName;
 
 
-    public ApplicationUser(String username, String password, String firstName, String lastName){
+    public ApplicationUser(String lastName, String firstName,String username, String password){
+        this.lastName = lastName;
+        this.firstName = firstName;
         this.username = username;
         this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
 
     }
 
