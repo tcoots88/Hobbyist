@@ -30,6 +30,9 @@ The user will be able to create a profile, sign in, and then select preferences.
 
 What are your stretch goals?
 Stretch
+Implementing a payment method with a service similiar to stripe. 
+Using a Websocket for users to interact. 
+
 
 
 What stretch goals are you going to aim for?
