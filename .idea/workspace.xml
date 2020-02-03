@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fe00a75-e245-43d6-ad10-923d7a3feba8" name="Default Changelist" comment="">
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> 75d30a8f845446a088d30722ea0ae846d87a0715
     </list>
+    <list default="true" id="0fe00a75-e245-43d6-ad10-923d7a3feba8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,14 +186,11 @@
     <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1580756773670">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-<<<<<<< HEAD
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580756394739" />
     <state x="229" y="80" key="SettingsEditor" timestamp="1580757976927">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state x="229" y="80" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1580757976927" />
-=======
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580756773670" />
->>>>>>> 75d30a8f845446a088d30722ea0ae846d87a0715
   </component>
 </project>
