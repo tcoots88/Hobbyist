@@ -1,9 +1,7 @@
 package com.example.hobbyist.hobbyist.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class ApplicationUser {
@@ -11,17 +9,28 @@ public class ApplicationUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long Id;
 
+
+    @OneToMany(mappedBy = "applicationUser")
+    List<Products> savedProductsList;
+
+    //getter for product list
+    public List<Products>getProductList(){
+
+        return this.savedProductsList;
+    }
+
+
     String username;
     String password;
     String firstName;
     String lastName;
 
 
-    public ApplicationUser(String username, String password, String firstName, String lastName){
+    public ApplicationUser(String lastName, String firstName,String username, String password){
+        this.lastName = lastName;
+        this.firstName = firstName;
         this.username = username;
         this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
 
     }
 

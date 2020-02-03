@@ -11,6 +11,7 @@ public class Products {
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long Id;
+
     //this may need to change
     @ManyToOne
     ApplicationUser applicationUser;
