@@ -11,7 +11,7 @@ public class ApplicationUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long Id;
 
-     String username;
+    String username;
     String password;
     String firstName;
     String lastName;
