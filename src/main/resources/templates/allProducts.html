@@ -11,7 +11,6 @@
 
 <form id="formId">
 <ul id="listingId">
-
     <li th:each="product: ${productsList}" >
         <div th:id="${product.title}" class="productClass">
             <input type="checkbox" th:id="${product.title + 'Input'}" name="check">
@@ -42,7 +41,7 @@
 <!--        <li><input type="submit" class="productImage"  onclick="shade(this)"/>-->
 <!--        </li>-->
 <!--        <li id="title">Title</li>-->
-<!--    -->
+
 <!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
 <!--    </ul>-->
 <!--    </div>-->

@@ -14,7 +14,19 @@ public class Products {
    static List<Products> productsList = new ArrayList<Products>();
 
     static {
-        productsList.add(  new Products("/images/Woodcarving.jpg", "Wood Working TEST TEST", "content here"  ));
+        productsList.add(  new Products("/images/Woodcarving.jpg", "Wood Working", "content here"  ));
+        productsList.add(  new Products("/images/Pyrography.jpg", "Pyrography", "content here"  ));
+        productsList.add(  new Products("/images/bonkei.jpg", "Bonkei", "content here"  ));
+        productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
+        productsList.add(  new Products("/images/fitness.jpg", "Fitness", "content here"  ));
+        productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
+        productsList.add(  new Products("/images/sewing.jpg", "Sewing", "content here"  ));
+        productsList.add(  new Products("/images/CandleMaking.jpg", "Candle Making", "content here"  ));
+        productsList.add(  new Products("/images/Jewelry.jpg", "Jewelry Making", "content here"  ));
+        productsList.add(  new Products("/images/puzzles.jpg", "Puzzles", "content here"  ));
+        productsList.add(  new Products("/images/essentialOil.jpg", "Essential Oils", "content here"  ));
+        productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
+
     }
 
     //System.out.println();
