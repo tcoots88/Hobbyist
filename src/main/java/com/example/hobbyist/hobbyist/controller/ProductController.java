@@ -22,14 +22,14 @@ public class ProductController {
     @Autowired
     ProductRepository productRepository;
 
-    @PostMapping("/myPreferences")
-    public RedirectView createUserPreferences(String url, String title, String productDescription, Principal p, Model m){
-        ApplicationUser userPreferences = applicationUserRepository.findByUsername(p.getName());
-        System.out.println(userPreferences);
 
-        Products products = new Products(userPreferences, url, title, productDescription);
-        productRepository.save(products);
-        return new RedirectView("myPreferences");
-    }
+//    @PostMapping("/myPreferences")
+//    public RedirectView createUserPreferences(String img, String title, String productDescription, Principal p, Model m){
+//        ApplicationUser userPreferences = applicationUserRepository.findByUsername(p.getName());
+//
+//        Products products = new Products(userPreferences, img, title, productDescription);
+//        productRepository.save(products);
+//        return new RedirectView("myPreferences");
+//    }
 
 }
