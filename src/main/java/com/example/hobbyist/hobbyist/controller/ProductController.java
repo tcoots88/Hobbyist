@@ -22,6 +22,7 @@ public class ProductController {
     @Autowired
     ProductRepository productRepository;
 
+
 //    @PostMapping("/myPreferences")
 //    public RedirectView createUserPreferences(String img, String title, String productDescription, Principal p, Model m){
 //        ApplicationUser userPreferences = applicationUserRepository.findByUsername(p.getName());
