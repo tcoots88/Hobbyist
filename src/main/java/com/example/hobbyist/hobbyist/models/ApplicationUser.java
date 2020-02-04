@@ -1,11 +1,16 @@
 package com.example.hobbyist.hobbyist.models;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
-public class ApplicationUser {
-    @javax.persistence.Id
+public class ApplicationUser implements UserDetails {
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long Id;
 
@@ -47,6 +52,31 @@ public class ApplicationUser {
 
     public String getUsername() {
         return this.username;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
     }
 
     public String getPassword() {
