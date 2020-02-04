@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Products {
 
     String title;
-    String description;
+    String productDescription;
 
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +21,10 @@ public class Products {
 
 
 
-    public Products(ApplicationUser applicationUser, Reviews review, String title, String description){
+    public Products(ApplicationUser applicationUser, Reviews review, String title, String productDescription){
         this.applicationUser = applicationUser;
         this.title = title;
-        this.description = description;
+        this.productDescription = productDescription;
         this.review = review;
 
     }
@@ -40,7 +40,7 @@ public class Products {
     }
 
     public String getDescription() {
-        return description;
+        return productDescription;
     }
 
     public ApplicationUser getApplicationUser() {
