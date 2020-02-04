@@ -78,6 +78,7 @@
 <!--        <br>-->
 <!--        <br>-->
 <!--        <br>-->
+
 <!--        <li><input type="submit" class="productImage" src="../../resources/images/Pyrography.jpg" onclick="shade(this)"/>-->
 <!--        <li>Description</li>-->
 <!--        <ul>-->
@@ -88,6 +89,19 @@
 <!--    <div class="productDiv">-->
 <!--    <li>Bonkei</li>-->
 <!--    <ul class="productDescription" id="bonkei">-->
+        <li><input type="submit" class="productImage"  onclick="shade(this)"/>
+        </li>
+        <li id="title">Title</li>
+    
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
+    </ul>
+    </div>
+
+    <form action="/myPreferences" method="POST">
+        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
+    <div class="productDiv">
+    <li>Woodcarving</li>
+    <ul class="productDescription" id="woodCarving">
 <!--        <br>-->
 <!--        <br>-->
 <!--        <br>-->
@@ -98,6 +112,7 @@
 <!--        <br>-->
 <!--        <br>-->
 <!--        <br>-->
+
 <!--        <li><input type="submit" class="productImage" src="../../resources/images/bonkei.jpg" onclick="shade(this)"/>-->
 <!--        <li>Description</li>-->
 <!--        <ul>-->

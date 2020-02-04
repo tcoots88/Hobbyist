@@ -50,7 +50,7 @@ public class ApplicationUserController {
         ApplicationUser loggedInUser = applicationUserRepository.findByUsername(p.getName());
         m.addAttribute("loggedInUser", loggedInUser);
         m.addAttribute("userWeAreVisiting", loggedInUser.Id);
-        m.addAttribute("userWeAreVisited", loggedInUser);
+        m.addAttribute("userWeVisited", loggedInUser);
         System.out.println("loggedInUser = " + loggedInUser);
         return "myPreferences";
 
