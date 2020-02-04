@@ -43,12 +43,19 @@ public class Products {
 
 
 
-    public Products( String img, String title, String productDescription){
+    public Products(String img, String title, String productDescription){
         this.img = img;
         this.title = title;
         this.productDescription = productDescription;
 
 
+    }
+
+    public Products(ApplicationUser userPreferences, String img, String title, String productDescription) {
+        this.applicationUser = userPreferences;
+        this.img = img;
+        this.title = title;
+        this.productDescription = productDescription;
     }
 
     public List<Products> getProductsList() {
