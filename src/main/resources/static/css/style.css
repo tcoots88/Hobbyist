@@ -1,8 +1,4 @@
 
-.productDiv{
-   width: 400px;
-   height: 400px;
-}
 /* this makes the checkbox hidden and hides any text for the box. */
 /* Also makes it so that anything selected will change the opacity */
 input[type=checkbox] {
@@ -25,13 +21,14 @@ label{
 
    background-repeat: no-repeat;
    text-align: center;
-   background-size: 300px, 300px;
+   background-size: contain;
    height: 300px;
    width: 300px;
    border: 2px solid #fff;
+
 }
 /* ------------------------------------------------------------------ */
-#lwLabel{
+#LeatherworkingLabel{
    background-image: url(../images/leatherWorking.png);
 }
 
@@ -40,74 +37,57 @@ label{
    background-size: contain;
 }
 
-#pyroLabel{
+#PyrographyLabel{
    background-image: url(../images/Pyrography.jpg);
 }
 
-#bonkeiLabel{
+#BonkeiLabel{
    background-image: url(../images/bonkei.jpg);
 }
 
-#bonsaiLabel{
+#BonsaiLabel{
    background-image: url(../images/bonsai.jpg);
 }
 
-#fitnessLabel{
+#FitnessLabel{
    background-image: url(../images/fitness.jpg);
 }
 
-#sewingLabel{
+#SewingLabel{
    background-image: url(../images/sewing.jpg);
 }
 
-#candleMakingLabel{
+#CandleMakingLabel{
    background-image: url(../images/CandleMaking.jpg);
 }
 
-#jewelrylabel{
+#JewelryMaking{
    background-image: url(../images/Jewelry.jpg);
 }
 
-#puzzlesLabel{
+#PuzzlesLabel{
    background-image: url(../images/puzzles.jpg);
 }
 
-#essentialOilsLabel{
+#EssentialOilsLabel{
    background-image: url(../images/essentialOil.jpg);
 }
 
-#teaLabel{
+#TeaLabel{
    background-image: url(../images/tea.jpg);
 }
 
-#submit {
-   /* margin: 6em, 3em; */
-   height: 30px;
-   width: 35x;
-}
 
-
-.productDescription{
-   text-align: center;
-   color: blue;
-   list-style: none
-}
 .title{
    text-align: center;
    list-style: none
 }
 #formId{
-   grid-template-columns: auto, auto, auto;
-   /* grid-template-rows: 25% 100px auto; */
    display: inline-flex;
-   /* justify-content: space-between; */
    flex-wrap: wrap;
    list-style: none
 }
-#listingId{
-   list-style: none;
-   text-align: center;
-}
+
 
 .productClass{
    text-align: center;
