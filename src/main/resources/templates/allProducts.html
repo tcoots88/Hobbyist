@@ -7,11 +7,13 @@
 </head>
 <body>
 <h1>Products</h1>
+<h2>Please select as many hobbies as you would like to try</h2>
+<h4>You will receive a box pertaining to one of your selections on each delivery</h4>
 
 
 <form id="formId">
 <ul id="listingId">
-    <li th:each="product: ${productsList}" >
+    <li th:each="product: ${productsList}" id="listItemId">
         <div th:id="${product.title}" class="productClass">
             <input type="checkbox" th:id="${product.title + 'Input'}" name="check">
             <label th:id="${product.title + 'Label'}" th:for="${product.title + 'Input'}"></label>
@@ -22,6 +24,7 @@
     </li>
 
 </ul>
+    <button name="Subscribe" type="submit" id="subscribeButton">Subscribe</button>
 </form>
 
 
