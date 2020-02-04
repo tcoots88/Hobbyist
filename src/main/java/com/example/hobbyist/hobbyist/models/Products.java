@@ -7,6 +7,7 @@ public class Products {
 
     String title;
     String productDescription;
+    String url;
 
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,11 +22,11 @@ public class Products {
 
 
 
-    public Products(ApplicationUser applicationUser, Reviews review, String title, String productDescription){
+    public Products(ApplicationUser applicationUser, String url, String title, String productDescription){
         this.applicationUser = applicationUser;
+        this.url = url;
         this.title = title;
         this.productDescription = productDescription;
-        this.review = review;
 
     }
 
