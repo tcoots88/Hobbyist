@@ -1,4 +1,4 @@
-package com.example.hobbyist.hobbyist.models;
+package com.example.hobbyist.hobbyist.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
