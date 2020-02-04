@@ -9,7 +9,7 @@
 <h1>Products</h1>
 
 
-<form id="formId">
+<form action="/myPreferences" method="POST" id="formId">
 <ul id="listingId">
     <li th:each="product: ${productsList}" >
         <div th:id="${product.title}" class="productClass">
@@ -20,14 +20,8 @@
         <p>anything</p>
 
     </li>
-
 </ul>
+    <input type="submit" name="subscribe"/>
 </form>
-
-
-
-
-
-
 </body>
 </html>
