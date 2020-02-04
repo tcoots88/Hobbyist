@@ -1,107 +1,98 @@
 
-
-#leatherWorking {
-   background: url(../images/leatherWorking.png);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+/* this makes the checkbox hidden and hides any text for the box. */
+/* Also makes it so that anything selected will change the opacity */
+input[type=checkbox] {
+   visibility: hidden;
 }
 
-#woodCarving {
-   background: url(../images/Woodcarving.jpg);
-   background-size: 300px, 300px;
+input[type=checkbox] + label {
+   color: transparent;
+   font-style: italic;
+   display: inline-block;
+
+}
+input[type=checkbox]:checked + label {
+   color: transparent;
+   opacity: .2;
+}
+/* ----------------------------------------------------------------- */
+/* This label tag makes most of the properties for each product image except for the image itself */
+label{
+
    background-repeat: no-repeat;
    text-align: center;
+   background-size: contain;
+   height: 300px;
+   width: 300px;
+   border: 2px solid #fff;
+
+}
+/* ------------------------------------------------------------------ */
+#LeatherworkingLabel{
+   background-image: url(../images/leatherWorking.png);
 }
 
-#pyrography {
-   background: url(../images/Pyrography.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#WoodWorkingLabel{
+   background-image: url(../images/Woodcarving.jpg);
+   background-size: contain;
 }
 
-#bonkei {
-   background: url(../images/bonkei.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#PyrographyLabel{
+   background-image: url(../images/Pyrography.jpg);
 }
 
-#bonsai {
-   background: url(../images/bonsai.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#BonkeiLabel{
+   background-image: url(../images/bonkei.jpg);
 }
 
-#fitness {
-   background: url(../images/fitness.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#BonsaiLabel{
+   background-image: url(../images/bonsai.jpg);
 }
 
-#sewing {
-   background: url(../images/sewing.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#FitnessLabel{
+   background-image: url(../images/fitness.jpg);
 }
 
-#candleMaking {
-   background: url(../images/CandleMaking.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#SewingLabel{
+   background-image: url(../images/sewing.jpg);
 }
 
-#jewelry {
-   background: url(../images/Jewelry.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#CandleMakingLabel{
+   background-image: url(../images/CandleMaking.jpg);
 }
 
-#puzzles {
-   background: url(../images/puzzles.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#JewelryMaking{
+   background-image: url(../images/Jewelry.jpg);
 }
-#essentialOils {
-   background: url(../images/essentialOil.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+
+#PuzzlesLabel{
+   background-image: url(../images/puzzles.jpg);
 }
-#tea {
-   background: url(../images/tea.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+
+#EssentialOilsLabel{
+   background-image: url(../images/essentialOil.jpg);
+}
+
+#TeaLabel{
+   background-image: url(../images/tea.jpg);
 }
 
 
-.productDescription{
+.title{
    text-align: center;
-   color: blue;
    list-style: none
 }
-#title{
-text-align: center;
-list-style: none
-}
-#parent{
-   grid-template-columns: auto, auto, auto;
-   /* grid-template-rows: 25% 100px auto; */
+#formId{
    display: inline-flex;
    flex-wrap: wrap;
    list-style: none
 }
 
 
-.productDiv{
-   width: 400px;
-   height: 400px;
+.productClass{
+   text-align: center;
 }
+
+
+
+
