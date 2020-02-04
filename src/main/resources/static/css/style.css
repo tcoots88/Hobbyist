@@ -1,85 +1,89 @@
 
-
-#leatherWorking {
-   background: url(../images/leatherWorking.png);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+.productDiv{
+   width: 400px;
+   height: 400px;
+}
+/* this makes the checkbox hidden and hides any text for the box. */
+/* Also makes it so that anything selected will change the opacity */
+input[type=checkbox] {
+   visibility: hidden;
 }
 
-#woodCarving {
-   background: url(../images/Woodcarving.jpg);
-   background-size: 300px, 300px;
+input[type=checkbox] + label {
+   color: transparent;
+   font-style: italic;
+   display: inline-block;
+
+}
+input[type=checkbox]:checked + label {
+   color: transparent;
+   opacity: .2;
+}
+/* ----------------------------------------------------------------- */
+/* This label tag makes most of the properties for each product image except for the image itself */
+label{
+
    background-repeat: no-repeat;
    text-align: center;
+   background-size: 300px, 300px;
+   height: 300px;
+   width: 300px;
+   border: 2px solid #fff;
+}
+/* ------------------------------------------------------------------ */
+#lwLabel{
+   background-image: url(../images/leatherWorking.png);
 }
 
-#pyrography {
-   background: url(../images/Pyrography.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#WoodWorkingLabel{
+   background-image: url(../images/Woodcarving.jpg);
+   background-size: contain;
 }
 
-#bonkei {
-   background: url(../images/bonkei.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#pyroLabel{
+   background-image: url(../images/Pyrography.jpg);
 }
 
-#bonsai {
-   background: url(../images/bonsai.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#bonkeiLabel{
+   background-image: url(../images/bonkei.jpg);
 }
 
-#fitness {
-   background: url(../images/fitness.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#bonsaiLabel{
+   background-image: url(../images/bonsai.jpg);
 }
 
-#sewing {
-   background: url(../images/sewing.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#fitnessLabel{
+   background-image: url(../images/fitness.jpg);
 }
 
-#candleMaking {
-   background: url(../images/CandleMaking.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#sewingLabel{
+   background-image: url(../images/sewing.jpg);
 }
 
-#jewelry {
-   background: url(../images/Jewelry.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#candleMakingLabel{
+   background-image: url(../images/CandleMaking.jpg);
 }
 
-#puzzles {
-   background: url(../images/puzzles.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+#jewelrylabel{
+   background-image: url(../images/Jewelry.jpg);
 }
-#essentialOils {
-   background: url(../images/essentialOil.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+
+#puzzlesLabel{
+   background-image: url(../images/puzzles.jpg);
 }
-#tea {
-   background: url(../images/tea.jpg);
-   background-size: 300px, 300px;
-   background-repeat: no-repeat;
-   text-align: center;
+
+#essentialOilsLabel{
+   background-image: url(../images/essentialOil.jpg);
+}
+
+#teaLabel{
+   background-image: url(../images/tea.jpg);
+}
+
+#submit {
+   /* margin: 6em, 3em; */
+   height: 30px;
+   width: 35x;
 }
 
 
@@ -88,20 +92,27 @@
    color: blue;
    list-style: none
 }
-#title{
-text-align: center;
-list-style: none
+.title{
+   text-align: center;
+   list-style: none
 }
-#parent{
+#formId{
    grid-template-columns: auto, auto, auto;
    /* grid-template-rows: 25% 100px auto; */
    display: inline-flex;
+   /* justify-content: space-between; */
    flex-wrap: wrap;
    list-style: none
 }
-
-
-.productDiv{
-   width: 400px;
-   height: 400px;
+#listingId{
+   list-style: none;
+   text-align: center;
 }
+
+.productClass{
+   text-align: center;
+}
+
+
+
+
