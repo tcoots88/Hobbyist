@@ -11,7 +11,7 @@
 <h4>You will receive a box pertaining to one of your selections on each delivery</h4>
 
 
-<form id="formId">
+<form action="/myPreferences" method="POST" id="formId">
 <ul id="listingId">
     <li th:each="product: ${productsList}" id="listItemId">
         <div th:id="${product.title}" class="productClass">
@@ -22,15 +22,10 @@
         <p>anything</p>
 
     </li>
-
 </ul>
+
     <button name="Subscribe" type="submit" id="subscribeButton">Subscribe</button>
+
 </form>
-
-
-
-
-
-
 </body>
 </html>
