@@ -1,15 +1,36 @@
 package com.example.hobbyist.hobbyist.models;
 
 import javax.persistence.*;
+import java.awt.*;
+import java.util.*;
+import java.util.List;
 
 @Entity
 public class Products {
 
     String title;
     String productDescription;
-    String url;
+    String img;
+   static List<Products> productsList = new ArrayList<Products>();
 
-    @javax.persistence.Id
+    static {
+        productsList.add(  new Products("/images/Woodcarving.jpg", "Wood Working", "content here"  ));
+        productsList.add(  new Products("/images/Pyrography.jpg", "Pyrography", "content here"  ));
+        productsList.add(  new Products("/images/bonkei.jpg", "Bonkei", "content here"  ));
+        productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
+        productsList.add(  new Products("/images/fitness.jpg", "Fitness", "content here"  ));
+        productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
+        productsList.add(  new Products("/images/sewing.jpg", "Sewing", "content here"  ));
+        productsList.add(  new Products("/images/CandleMaking.jpg", "Candle Making", "content here"  ));
+        productsList.add(  new Products("/images/Jewelry.jpg", "Jewelry Making", "content here"  ));
+        productsList.add(  new Products("/images/puzzles.jpg", "Puzzles", "content here"  ));
+        productsList.add(  new Products("/images/essentialOil.jpg", "Essential Oils", "content here"  ));
+        productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
+
+    }
+
+    //System.out.println();
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long Id;
 
@@ -22,13 +43,31 @@ public class Products {
 
 
 
-    public Products(ApplicationUser applicationUser, String url, String title, String productDescription){
-        this.applicationUser = applicationUser;
-        this.url = url;
+    public Products( String img, String title, String productDescription){
+        this.img = img;
         this.title = title;
         this.productDescription = productDescription;
 
+
     }
+
+    public List<Products> getProductsList() {
+        return this.productsList;
+    }
+
+
+
+
+
+        //Products WoodWorking = new Products("/images/Woodcarving.jpg", "Wood Working", "content here"  );
+
+
+    // productsList.add( Products WoodWorking = new Products("/images/Woodcarving.jpg", "Wood Working", "content here"  );
+
+
+
+
+
 
     //Empty Constructor
     public Products(){

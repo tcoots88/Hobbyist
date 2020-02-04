@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>All Products</title>
@@ -8,9 +8,66 @@
 <body>
 <h1>Products</h1>
 
-<ul id="parent">
-    <div class="productDiv">
-    <ul class="productDescription" id="leatherWorking">
+
+
+
+    <ul th:each="product: ${productsList}" >
+        <p>[[${product.title}]]</p>
+        <p>anything</p>
+
+    </ul>
+
+
+
+
+<!--<ul id="parent">-->
+<!--    <div class="productDiv">-->
+<!--    <ul class="productDescription" id="leatherWorking">-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--        <li><input type="submit" class="productImage"  onclick="shade(this)"/>-->
+<!--        </li>-->
+<!--        <li id="title">Title</li>-->
+
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--    </ul>-->
+<!--    </div>-->
+
+<!--    <form action="/allProducts" method="POST">-->
+<!--        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">-->
+<!--    <div class="productDiv">-->
+<!--    <li>Woodcarving</li>-->
+<!--    <ul class="productDescription" id="woodCarving">-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--        <li><input type="submit" class="productImage" src="/images/Woodcarving.jpg" onclick="shade(this)"/>-->
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--    </form>-->
+
+<!--    <div class="productDiv">-->
+<!--    <li>Pyrography</li>-->
+<!--    <ul class="productDescription" id="pyrography">-->
 <!--        <br>-->
 <!--        <br>-->
 <!--        <br>-->
@@ -21,6 +78,17 @@
 <!--        <br>-->
 <!--        <br>-->
 <!--        <br>-->
+
+<!--        <li><input type="submit" class="productImage" src="../../resources/images/Pyrography.jpg" onclick="shade(this)"/>-->
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--    <div class="productDiv">-->
+<!--    <li>Bonkei</li>-->
+<!--    <ul class="productDescription" id="bonkei">-->
         <li><input type="submit" class="productImage"  onclick="shade(this)"/>
         </li>
         <li id="title">Title</li>
@@ -44,269 +112,186 @@
 <!--        <br>-->
 <!--        <br>-->
 <!--        <br>-->
-        <li><input type="submit" class="productImage" src="/images/Woodcarving.jpg" onclick="shade(this)"/>
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
 
-    <form action="/myPreferences" method="POST">
-        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
+<!--        <li><input type="submit" class="productImage" src="../../resources/images/bonkei.jpg" onclick="shade(this)"/>-->
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--    <div class="productDiv">-->
+<!--    <li>Bonsai</li>-->
+<!--    <ul class="productDescription" id="bonsai">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <li><input type="submit" class="productImage" src="../../resources/images/bonsai.jpg" onclick="shade(this)"/>-->
 
-    <div class="productDiv">
-    <li>Pyrography</li>
-    <ul class="productDescription" id="pyrography">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <li><input type="submit" class="productImage" src="../../resources/images/Pyrography.jpg" onclick="shade(this)"/>
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--    <div class="productDiv">-->
+<!--    <li>Fitness</li>-->
+<!--    <ul class="productDescription" id="fitness">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <li><input type="submit" class="productImage" src="../../resources/images/fitness.jpg" onclick="shade(this)"/>-->
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--    <div class="productDiv">-->
+<!--    <li>Sewing</li>-->
+<!--    <ul class="productDescription" id="sewing">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <li><input type="submit" class="productImage" src="../../resources/images/sewing.jpg" onclick="shade(this)"/>-->
 
-    <form action="/myPreferences" method="POST">
-        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--    <div class="productDiv">-->
+<!--    <li>Candle Making</li>-->
+<!--    <ul class="productDescription" id="candleMaking">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <li><input type="submit" class="productImage" src="../../resources/images/CandleMaking.jpg" onclick="shade(this)"/>-->
 
-        <div class="productDiv">
-    <li>Bonkei</li>
-    <ul class="productDescription" id="bonkei">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <li><input type="submit" class="productImage" src="../../resources/images/bonkei.jpg" onclick="shade(this)"/>
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--    <div class="productDiv">-->
+<!--    <li>Jewelry Making</li>-->
+<!--    <ul class="productDescription" id="jewelry">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <li><input type="submit" class="productImage" src="../../resources/images/Jewelry.jpg" onclick="shade(this)"/>-->
 
-    <form action="/myPreferences" method="POST">
-        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
-        <div class="productDiv">
-    <li>Bonsai</li>
-    <ul class="productDescription" id="bonsai">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <li><input type="submit" class="productImage" src="../../resources/images/bonsai.jpg" onclick="shade(this)"/>
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--    <div class="productDiv">-->
+<!--    <li>Puzzles</li>-->
+<!--    <ul class="productDescription" id="puzzles">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <li><input type="submit" class="productImage" src="../../resources/images/puzzles.jpg" onclick="shade(this)"/>-->
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--    <div class="productDiv">-->
+<!--    <li>Essential Oils</li>-->
+<!--    <ul class="productDescription" id="essentialOils">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <li><input type="submit" class="productImage" src="../../resources/images/essentialOil.jpg" onclick="shade(this)"/>-->
 
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--    <div class="productDiv">-->
+<!--    <li>Tea</li>-->
+<!--    <ul class="productDescription" id="tea">-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <li><input type="submit" class="productImage" src="../../resources/images/tea.jpg" onclick="shade(this)"/>-->
 
-    <form action="/myPreferences" method="POST">
-        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
-        <div class="productDiv">
-    <li>Fitness</li>
-    <ul class="productDescription" id="fitness">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <li><input type="submit" class="productImage" src="../../resources/images/fitness.jpg" onclick="shade(this)"/>
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
-
-    <form action="/myPreferences" method="POST">
-        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
-        <div class="productDiv">
-    <li>Sewing</li>
-    <ul class="productDescription" id="sewing">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <li><input type="submit" class="productImage" src="../../resources/images/sewing.jpg" onclick="shade(this)"/>
-
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
-
-    <form action="/myPreferences" method="POST">
-        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
-        <div class="productDiv">
-    <li>Candle Making</li>
-    <ul class="productDescription" id="candleMaking">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <li><input type="submit" class="productImage" src="../../resources/images/CandleMaking.jpg" onclick="shade(this)"/>
-
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
-
-    <form action="/myPreferences" method="POST">
-        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
-        <div class="productDiv">
-    <li>Jewelry Making</li>
-    <ul class="productDescription" id="jewelry">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <li><input type="submit" class="productImage" src="../../resources/images/Jewelry.jpg" onclick="shade(this)"/>
-
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
-
-    <form action="/myPreferences" method="POST">
-        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
-        <div class="productDiv">
-    <li>Puzzles</li>
-    <ul class="productDescription" id="puzzles">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <li><input type="submit" class="productImage" src="../../resources/images/puzzles.jpg" onclick="shade(this)"/>
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
-
-    <form action="/myPreferences" method="POST">
-        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
-        <div class="productDiv">
-    <li>Essential Oils</li>
-    <ul class="productDescription" id="essentialOils">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <li><input type="submit" class="productImage" src="../../resources/images/essentialOil.jpg" onclick="shade(this)"/>
-
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
-
-    <form action="/myPreferences" method="POST">
-        <input type="hidden" th:value="${userIdWeAreVisiting}" name="id">
-        <div class="productDiv">
-    <li>Tea</li>
-    <ul class="productDescription" id="tea">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <li><input type="submit" class="productImage" src="../../resources/images/tea.jpg" onclick="shade(this)"/>
-
-        <li>Description</li>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>
-        </ul>
-    </ul>
-    </div>
-    </form>
-</ul>
-</section>
+<!--        <li>Description</li>-->
+<!--        <ul>-->
+<!--            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada. Nisl nisi scelerisque eu ultrices vitae auctor. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas.</li>-->
+<!--        </ul>-->
+<!--    </ul>-->
+<!--    </div>-->
+<!--</ul>-->
+<!--</section>-->
 
 
 
 
 
-<script src="script.js"></script>
 </body>
 </html>
