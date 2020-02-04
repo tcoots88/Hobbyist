@@ -9,18 +9,21 @@
 <h1>Products</h1>
 
 
+<form id="formId">
+<ul id="listingId">
 
-<ul>
     <li th:each="product: ${productsList}" >
+        <div th:id="${product.title}" class="productClass">
+            <input type="checkbox" th:id="${product.title + 'Input'}" name="check">
+            <label th:id="${product.title + 'Label'}" th:for="${product.title + 'Input'}"></label>
+        </div>
         <p>[[${product.title}]]</p>
         <p>anything</p>
 
     </li>
-    <li>
-        test list
-    </li>
-</ul>
 
+</ul>
+</form>
 
 
 <!--<ul id="parent">-->
