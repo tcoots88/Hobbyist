@@ -1,11 +1,16 @@
 package com.example.hobbyist.hobbyist.models;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
+
+import java.security.Principal;
 
 @Controller
 public class ApplicationUserController {
@@ -27,6 +32,28 @@ public class ApplicationUserController {
     @GetMapping("/login")
     public String showLoginForm(){
         return "login";
+    }
+
+    @GetMapping("/users/{id}")
+    public String renderUserDetails(@PathVariable long id, Principal p, Model m){
+        if(p != null){
+            ApplicationUser userWeAreVisiting = applicationUserRepository.findById(id).get();
+            ApplicationUser loggedInUser = applicationUserRepository.findByUsername(p.getName());
+            m.addAttribute("userWeAreVisiting", userWeAreVisiting);
+            m.addAttribute("loggedInUser", loggedInUser);
+        }
+        return "myPreferences";
+    }
+
+    @GetMapping("/myPreferences")
+    public String showPreferences(Principal p, Model m){
+        ApplicationUser loggedInUser = applicationUserRepository.findByUsername(p.getName());
+        m.addAttribute("loggedInUser", loggedInUser);
+        m.addAttribute("userWeAreVisiting", loggedInUser.Id);
+        m.addAttribute("userWeAreVisited", loggedInUser);
+        System.out.println("loggedInUser = " + loggedInUser);
+        return "myPreferences";
+
     }
 
 }
