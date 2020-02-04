@@ -25,6 +25,7 @@ public class ProductController {
     @PostMapping("/myPreferences")
     public RedirectView createUserPreferences(String url, String title, String productDescription, Principal p, Model m){
         ApplicationUser userPreferences = applicationUserRepository.findByUsername(p.getName());
+        System.out.println(userPreferences);
 
         Products products = new Products(userPreferences, url, title, productDescription);
         productRepository.save(products);
