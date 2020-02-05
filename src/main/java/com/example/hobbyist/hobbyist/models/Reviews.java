@@ -8,7 +8,7 @@ public class Reviews {
     String body;
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long Id;
+    long id;
 
     //this may need to change
    @ManyToOne

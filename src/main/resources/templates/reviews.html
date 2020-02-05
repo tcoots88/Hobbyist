@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Reviews </title>
+</head>
+<body>
+<h1>Product Reviews</h1>
+
+<div th:each="review : ${reviews}">
+    <a th:href="'/review/'+${review.id}">[[${user.body}]]</a>
+</div>
+</body>
+</html>
