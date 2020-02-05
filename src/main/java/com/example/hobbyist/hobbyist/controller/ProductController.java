@@ -23,88 +23,106 @@ public class ProductController {
     ProductRepository productRepository;
 
 
-
     @PostMapping("/myPreferences")
     public RedirectView createUserPreferences(
-            String img, String title, String productDescription, Principal p, Model m, Boolean Bonsai, Boolean WoodWorking, Boolean Pyrography, Boolean Bonkei, Boolean Fitness, Boolean Sewing, Boolean CandleMaking, Boolean JewelryMaking, Boolean Puzzles, Boolean EssentialOils ) {
+            String img, String title, String productDescription, Principal p, Model m, boolean Bonsai, boolean WoodWorking, boolean Pyrography, boolean Bonkei, boolean Fitness, boolean Sewing, boolean CandleMaking, boolean JewelryMaking, boolean Puzzles, boolean EssentialOils) {
         if (p != null) {
             ApplicationUser userPreferences = applicationUserRepository.findByUsername(p.getName());
-//
-//            Products products = new Products(userPreferences, img, title, productDescription);
-//
-//                for(int i = 0; i < 12; i++){
-//
-//                    if(Products.productsList.get(i).getTitle() == true){
-//
-//                        productRepository.save(Products.productsList.get(i));
-//                    }
-//
-//                }
 
 
             if (WoodWorking) {
                 Products woodworking = Products.productsList.get(0);
-
+                woodworking.applicationUser = userPreferences;
                 productRepository.save(woodworking);
+//                userPreferences.savedProductsList.add(woodworking);
+
                 // System.out.println(title);
             }
 
             if (Pyrography) {
                 Products pyrography = Products.productsList.get(1);
-
+                pyrography.applicationUser = userPreferences;
                 productRepository.save(pyrography);
+//                userPreferences.savedProductsList.add(pyrography);
+
+
                 // System.out.println(title);
             }
 
             if (Bonkei) {
-                 Products bonkei = Products.productsList.get(2);
+                Products bonkei = Products.productsList.get(2);
+                bonkei.applicationUser = userPreferences;
+                productRepository.save(bonkei);
+//                userPreferences.savedProductsList.add(bonkei);
 
-               productRepository.save(bonkei);
-               // System.out.println(title);
+
+                // System.out.println(title);
             }
             if (Bonsai) {
                 Products bonsai = Products.productsList.get(3);
-
+                bonsai.applicationUser = userPreferences;
                 productRepository.save(bonsai);
+//                userPreferences.savedProductsList.add(bonsai);
+
+
                 // System.out.println(title);
             }
             if (Fitness) {
                 Products fitness = Products.productsList.get(4);
-
+                fitness.applicationUser = userPreferences;
                 productRepository.save(fitness);
+//                userPreferences.savedProductsList.add(fitness);
+
+
                 // System.out.println(title);
             }
 
             if (Sewing) {
                 Products sewing = Products.productsList.get(5);
-
+                sewing.applicationUser = userPreferences;
                 productRepository.save(sewing);
+//                userPreferences.savedProductsList.add(sewing);
+
+
                 // System.out.println(title);
             }
             if (CandleMaking) {
                 Products candlemaking = Products.productsList.get(6);
-
+                candlemaking.applicationUser = userPreferences;
                 productRepository.save(candlemaking);
+//                userPreferences.savedProductsList.add(candlemaking);
+
+
                 // System.out.println(title);
             }
             if (JewelryMaking) {
                 Products jewelry = Products.productsList.get(7);
-
+                jewelry.applicationUser = userPreferences;
                 productRepository.save(jewelry);
+//                userPreferences.savedProductsList.add(jewelry);
+
+
                 // System.out.println(title);
             }
             if (Puzzles) {
                 Products puzzles = Products.productsList.get(8);
-
+                puzzles.applicationUser = userPreferences;
                 productRepository.save(puzzles);
+//                userPreferences.savedProductsList.add(puzzles);
+
+
                 // System.out.println(title);
             }
             if (EssentialOils) {
                 Products essentialoils = Products.productsList.get(9);
-
+                essentialoils.applicationUser = userPreferences;
                 productRepository.save(essentialoils);
+//                userPreferences.savedProductsList.add(essentialoils);
+
+
                 // System.out.println(title);
             }
+            applicationUserRepository.save(userPreferences);
 
 
             return new RedirectView("/myPreferences");
@@ -114,3 +132,4 @@ public class ProductController {
 
     }
 }
+

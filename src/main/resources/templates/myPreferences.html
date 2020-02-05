@@ -9,12 +9,14 @@
 <h1>This is [[${loggedInUser.firstName}]]'s detail page, you are on their page [[${userWeVisited.username}]]</h1>
 
 <h1>These are the list of products you are subscribed to</h1>
-<div th:each="currentUser : ${}">
+<div th:each="currentUser : ${allUsers}">
     <p>[[${currentUser.username}]] [[${currentUser.firstName}]]</p>
 </div>
 
 <ul>
-    <li th:each="preference: ${loggedInUser.pere">
+    <li th:each="preference: ${loggedInUser.savedProductsList}">
+        <p th:text="${preference.title}">Hey</p>
+
 
     </li>
 </ul>
