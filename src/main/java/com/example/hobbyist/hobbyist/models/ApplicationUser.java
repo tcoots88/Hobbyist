@@ -22,7 +22,7 @@ public class ApplicationUser implements UserDetails {
 
 
     @OneToMany(mappedBy = "applicationUser")
-    List<Products> savedProductsList;
+   public List<Products> savedProductsList;
 
     //getter for product list
     public List<Products>getProductList(){
