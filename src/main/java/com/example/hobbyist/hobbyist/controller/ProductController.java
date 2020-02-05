@@ -23,10 +23,9 @@ public class ProductController {
     ProductRepository productRepository;
 
 
-
     @PostMapping("/myPreferences")
     public RedirectView createUserPreferences(
-            String img, String title, String productDescription, Principal p, Model m, Boolean Bonsai, Boolean WoodWorking, Boolean Pyrography, Boolean Bonkei, Boolean Fitness, Boolean Sewing, Boolean CandleMaking, Boolean JewelryMaking, Boolean Puzzles, Boolean EssentialOils ) {
+            String img, String title, String productDescription, Principal p, Model m, boolean Bonsai, boolean WoodWorking, boolean Pyrography, boolean Bonkei, boolean Fitness, boolean Sewing, boolean CandleMaking, boolean JewelryMaking, boolean Puzzles, boolean EssentialOils ) {
         if (p != null) {
             ApplicationUser userPreferences = applicationUserRepository.findByUsername(p.getName());
 //
@@ -41,11 +40,10 @@ public class ProductController {
 //
 //                }
 
-
             if (WoodWorking) {
                 Products woodworking = Products.productsList.get(0);
-
-                productRepository.save(woodworking);
+                userPreferences.savedProductsList.add(woodworking);
+                //productRepository.save(woodworking);
                 // System.out.println(title);
             }
 
@@ -102,11 +100,10 @@ public class ProductController {
             if (EssentialOils) {
                 Products essentialoils = Products.productsList.get(9);
 
-                productRepository.save(essentialoils);
+                productRepository.save(essentialoils );
                 // System.out.println(title);
             }
-
-
+        applicationUserRepository.save(userPreferences);
             return new RedirectView("/myPreferences");
         }
 
