@@ -155,6 +155,19 @@ label{
    text-align: center;
 }
 
+.cartClass{
+height: 300px;
+width: 300px;
+
+   background-repeat: no-repeat;
+   text-align: center;
+   background-size: contain;
+   background-position: center;
+   height: 200px;
+   width: 300px;
+   border-radius:50px;
+}
+
 
 
 

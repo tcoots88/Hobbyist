@@ -22,7 +22,9 @@
         <form th:action="'/myPreferences/delete/' + ${preference.Id}" method = "POST">
             <button type="submit">Delete</button>
         </form>
-
+        <form th:action="'/myPreferences/addToCart/' + ${preference.Id}" method = "POST">
+            <button type="submit">Make Current Box</button>
+        </form>
 
     </li>
 </ul>
