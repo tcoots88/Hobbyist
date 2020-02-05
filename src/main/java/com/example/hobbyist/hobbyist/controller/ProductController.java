@@ -8,6 +8,7 @@ import com.example.hobbyist.hobbyist.models.Products;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -21,6 +22,16 @@ public class ProductController {
 
     @Autowired
     ProductRepository productRepository;
+
+
+
+    @PostMapping("/myPreferences/delete/{id}")
+    public RedirectView delete(@PathVariable long id){
+        productRepository.deleteById(id);
+
+
+        return new RedirectView("/myPreferences");
+    }
 
 
     @PostMapping("/myPreferences")
@@ -117,9 +128,9 @@ public class ProductController {
     
             return new RedirectView("/myPreferences");
         }
-
-        return new RedirectView("/login");
+//
+//        return new RedirectView("/login");
 
     }
-}
+
 
