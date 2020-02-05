@@ -15,7 +15,7 @@
 <ul id="listingId">
     <li th:each="product: ${productsList}" id="listItemId">
         <div th:id="${product.title}" class="productClass">
-            <input type="checkbox" th:id="${product.title + 'Input'}" name="check">
+            <input type="checkbox" th:id="${product.title + 'Input'}" th:name="${product.title}">
             <label th:id="${product.title + 'Label'}" th:for="${product.title + 'Input'}"></label>
         </div>
         <p>[[${product.title}]]</p>
@@ -24,7 +24,7 @@
     </li>
 </ul>
 
-    <button name="Subscribe" type="submit" id="subscribeButton">Subscribe</button>
+    <button name="Subscribe" type="submit" class="button">Subscribe</button>
 
 </form>
 </body>
