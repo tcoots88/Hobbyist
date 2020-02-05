@@ -1,3 +1,25 @@
+/*Gradient Background*/
+body {
+   background: linear-gradient(-45deg, #13547a, #80d0c7, #23a6d5, #23d5ab);
+   background-size: 400% 800%;
+   animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+/*----------------------------------------------------*/
+h1, h2, h4{
+   text-align: center;
+}
 
 /* this makes the checkbox hidden and hides any text for the box. */
 /* Also makes it so that anything selected will change the opacity */
@@ -16,15 +38,48 @@ input[type=checkbox]:checked + label {
    opacity: .2;
 }
 /* ----------------------------------------------------------------- */
+/*Button*/
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 6.5px 13px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 16px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+}
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+}
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+}
 /* This label tag makes most of the properties for each product image except for the image itself */
 label{
 
    background-repeat: no-repeat;
    text-align: center;
    background-size: contain;
-   height: 300px;
+   background-position: center;
+   height: 200px;
    width: 300px;
-   border: 2px solid #fff;
+   border-radius:50px;
 
 }
 /* ------------------------------------------------------------------ */
@@ -61,7 +116,7 @@ label{
    background-image: url(../images/CandleMaking.jpg);
 }
 
-#JewelryMaking{
+#JewelryMakingLabel{
    background-image: url(../images/Jewelry.jpg);
 }
 
@@ -77,6 +132,12 @@ label{
    background-image: url(../images/tea.jpg);
 }
 
+#listingId{
+   text-align: center;
+   list-style: none;
+   display: inline-flex;
+   flex-wrap: wrap;
+}
 
 .title{
    text-align: center;
@@ -85,7 +146,8 @@ label{
 #formId{
    display: inline-flex;
    flex-wrap: wrap;
-   list-style: none
+   list-style: none;
+   justify-content: center;
 }
 
 
