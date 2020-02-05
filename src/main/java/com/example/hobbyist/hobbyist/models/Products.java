@@ -44,8 +44,6 @@ public class Products {
         this.img = img;
         this.title = title;
         this.productDescription = productDescription;
-
-
     }
 
     public Products(ApplicationUser userPreferences, String img, String title, String productDescription) {
@@ -58,19 +56,6 @@ public class Products {
     public List<Products> getProductsList() {
         return this.productsList;
     }
-
-
-
-
-
-        //Products WoodWorking = new Products("/images/Woodcarving.jpg", "Wood Working", "content here"  );
-
-
-    // productsList.add( Products WoodWorking = new Products("/images/Woodcarving.jpg", "Wood Working", "content here"  );
-
-
-
-
 
 
     //Empty Constructor
