@@ -33,7 +33,7 @@ public class Products {
 
     //this may need to change
     @ManyToOne
-    ApplicationUser applicationUser;
+    public ApplicationUser applicationUser;
 
     @ManyToOne
     Reviews review;
