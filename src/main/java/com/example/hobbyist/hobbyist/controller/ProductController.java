@@ -50,12 +50,12 @@ public class ProductController {
             }
 
             if (Pyrography) {
-                Products bonsai = Products.productsList.get(1);
+                Products pyrography = Products.productsList.get(1);
 
-                productRepository.save(bonsai);
+                productRepository.save(pyrography);
                 // System.out.println(title);
             }
-//
+
             if (Bonkei) {
                  Products bonkei = Products.productsList.get(2);
 
