@@ -1,7 +1,6 @@
 package com.example.hobbyist.hobbyist.models;
 
 import javax.persistence.*;
-import java.awt.*;
 import java.util.*;
 import java.util.List;
 
@@ -11,7 +10,7 @@ public class Products {
     String title;
     String productDescription;
     String img;
-   static List<Products> productsList = new ArrayList<Products>();
+   public static List<Products> productsList = new ArrayList<Products>();
 
     static {
         productsList.add(  new Products("/images/Woodcarving.jpg", "WoodWorking", "content here"  ));
@@ -19,14 +18,12 @@ public class Products {
         productsList.add(  new Products("/images/bonkei.jpg", "Bonkei", "content here"  ));
         productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
         productsList.add(  new Products("/images/fitness.jpg", "Fitness", "content here"  ));
-        productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
         productsList.add(  new Products("/images/sewing.jpg", "Sewing", "content here"  ));
         productsList.add(  new Products("/images/CandleMaking.jpg", "CandleMaking", "content here"  ));
         productsList.add(  new Products("/images/Jewelry.jpg", "JewelryMaking", "content here"  ));
         productsList.add(  new Products("/images/puzzles.jpg", "Puzzles", "content here"  ));
         productsList.add(  new Products("/images/essentialOil.jpg", "EssentialOils", "content here"  ));
         productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
-
     }
 
     //System.out.println();
