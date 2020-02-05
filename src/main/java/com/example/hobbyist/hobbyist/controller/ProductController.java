@@ -25,18 +25,15 @@ public class ProductController {
 
     @PostMapping("/myPreferences")
     public RedirectView createUserPreferences(
-            String img, String title, String productDescription, Principal p, Model m, boolean Bonsai, boolean WoodWorking, boolean Pyrography, boolean Bonkei, boolean Fitness, boolean Sewing, boolean CandleMaking, boolean JewelryMaking, boolean Puzzles, boolean EssentialOils) {
+            String img, String title, String productDescription, Principal p, Model m, boolean Bonsai, boolean WoodWorking, boolean Pyrography, boolean Bonkei, boolean Fitness, boolean Sewing, boolean CandleMaking, boolean JewelryMaking, boolean Puzzles, boolean EssentialOils ) {
         if (p != null) {
             ApplicationUser userPreferences = applicationUserRepository.findByUsername(p.getName());
-
 
             if (WoodWorking) {
                 Products woodworking = Products.productsList.get(0);
                 woodworking.applicationUser = userPreferences;
                 productRepository.save(woodworking);
 //                userPreferences.savedProductsList.add(woodworking);
-
-                // System.out.println(title);
             }
 
             if (Pyrography) {
@@ -44,9 +41,6 @@ public class ProductController {
                 pyrography.applicationUser = userPreferences;
                 productRepository.save(pyrography);
 //                userPreferences.savedProductsList.add(pyrography);
-
-
-                // System.out.println(title);
             }
 
             if (Bonkei) {
@@ -55,8 +49,6 @@ public class ProductController {
                 productRepository.save(bonkei);
 //                userPreferences.savedProductsList.add(bonkei);
 
-
-                // System.out.println(title);
             }
             if (Bonsai) {
                 Products bonsai = Products.productsList.get(3);
@@ -73,8 +65,6 @@ public class ProductController {
                 productRepository.save(fitness);
 //                userPreferences.savedProductsList.add(fitness);
 
-
-                // System.out.println(title);
             }
 
             if (Sewing) {
@@ -119,12 +109,12 @@ public class ProductController {
                 productRepository.save(essentialoils);
 //                userPreferences.savedProductsList.add(essentialoils);
 
-
                 // System.out.println(title);
             }
             applicationUserRepository.save(userPreferences);
-
-
+                // System.out.println(title);
+            }
+    
             return new RedirectView("/myPreferences");
         }
 
