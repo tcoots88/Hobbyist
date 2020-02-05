@@ -29,7 +29,7 @@ public class Products {
     //System.out.println();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long Id;
+    public long Id;
 
     //this may need to change
     @ManyToOne
