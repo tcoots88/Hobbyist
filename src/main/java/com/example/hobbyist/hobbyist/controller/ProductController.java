@@ -35,8 +35,7 @@ public class ProductController {
 
 
     @PostMapping("/myPreferences")
-    public RedirectView createUserPreferences(
-            String img, String title, String productDescription, Principal p, Model m, boolean Bonsai, boolean WoodWorking, boolean Pyrography, boolean Bonkei, boolean Fitness, boolean Sewing, boolean CandleMaking, boolean JewelryMaking, boolean Puzzles, boolean EssentialOils ) {
+    public RedirectView createUserPreferences(String img, String title, String productDescription, Principal p, Model m, boolean Bonsai, boolean WoodWorking, boolean Pyrography, boolean Bonkei, boolean Fitness, boolean Sewing, boolean CandleMaking, boolean JewelryMaking, boolean Puzzles, boolean EssentialOils ) {
         if (p != null) {
             ApplicationUser userPreferences = applicationUserRepository.findByUsername(p.getName());
 
@@ -128,7 +127,7 @@ public class ProductController {
     
             return new RedirectView("/myPreferences");
         }
-//
+
 //        return new RedirectView("/login");
 
     }
