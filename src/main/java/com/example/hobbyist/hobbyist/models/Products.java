@@ -23,7 +23,7 @@ public class Products {
         productsList.add(  new Products("/images/Jewelry.jpg", "JewelryMaking", "content here"  ));
         productsList.add(  new Products("/images/puzzles.jpg", "Puzzles", "content here"  ));
         productsList.add(  new Products("/images/essentialOil.jpg", "EssentialOils", "content here"  ));
-        productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
+
     }
 
     //System.out.println();
