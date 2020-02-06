@@ -13,7 +13,7 @@ public class Products {
 
 
     String img;
-    String review;
+    String ProductReview;
 
     
    public static List<Products> productsList = new ArrayList<Products>();
@@ -21,10 +21,8 @@ public class Products {
     static {
 
         productsList.add(  new Products("/images/soccer.jpg", "Soccer", "Get fit and improve your coordination while learning to play soccer. This kit will get you well on your way to playing the beautiful game", "This box is amazing, I have never played soccer and now I am a huge fan. Go Manchester United!"  ));
-
         productsList.add(  new Products("/images/knitting.jpg", "Knitting", "Learn why knitting is becoming one of the most recommended practices to fight stress. With this kit you get to create awesome wool products all while relaxing." , "" ));
         productsList.add(  new Products("/images/hiking.jpg", "Hiking", "We can't think of a better way to get fit then to explore the wilderness while hiking. This box comes with maps of your local trails and advice on pacing and safety." , "" ));
-
         productsList.add(  new Products("/images/Woodcarving.jpg", "WoodWorking", "Wood carving is a form of woodworking by means of a cutting tool or chisel resulting in a wooden figure or figurine", ""  ));
         productsList.add(  new Products("/images/Pyrography.jpg", "Pyrography", "The free handed art of decorating wood or other materials with burn marks resulting from the controlled application of a heated object", ""  ));
         productsList.add(  new Products("/images/bonkei.jpg", "Bonkei", "A bonkei contains no living material and is a three-dimensional depiction of a landscape in miniature, portrayed using mainly dry materials like rock, papier-mâché or cement mixtures, and sand in a shallow tray", ""  ));
@@ -59,11 +57,13 @@ public class Products {
     private Set<Review> reviews;
 
 
-    public Products(String img, String title, String productDescription, String review){
+
+
+    public Products(String img, String title, String productDescription, String ProductReview){
         this.img = img;
         this.title = title;
         this.productDescription = productDescription;
-        this.review = review;
+        this.ProductReview = ProductReview;
     }
 
     public Products(ApplicationUser userPreferences, String img, String title, String productDescription) {
@@ -86,6 +86,10 @@ public class Products {
     //GETTERS
     public String getTitle() {
         return title;
+    }
+
+    public String getProductReview() {
+        return ProductReview;
     }
 
     public String getImg() {
