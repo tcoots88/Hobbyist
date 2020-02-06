@@ -63,27 +63,27 @@ public class ApplicationUserController {
         System.out.println("loggedInUser = " + loggedInUser);
         return "myPreferences";
     }
-
+//
     @GetMapping("/reviews/{title}")
     public String showProductReviews(@PathVariable String title, Principal p, Model m){
-        ArrayList<Products> userWeAreVisiting = productRepository.findByTitle(title);
+        ArrayList<Products> product = productRepository.findByTitle(title);
 //        System.out.println("userWeAreVisiting = " + userWeAreVisiting);
         System.out.println("is this the right id" + title);
 //                Products loggedInUser = productRepository.findById(id).get();
 //        Products loggedInUser = productRepository.findById(p.getName());
-        m.addAttribute("userWeAreVisiting", userWeAreVisiting);
+        m.addAttribute("product", product);
 //        m.addAttribute("loggedInUser", loggedInUser);
         return "reviews";
     }
 
-    @GetMapping("/reviews")
-    public String getAllReviews(Principal p, Model m){
-        if(p != null){
-            m.addAttribute("review", p);
-        }
-        m.addAttribute("reviews", productRepository.findAll());
-        return "reviews";
-    }
+//    @GetMapping("/reviews")
+//    public String getAllReviews(Principal p, Model m){
+//        if(p != null){
+//            m.addAttribute("review", p);
+//        }
+//        m.addAttribute("reviews", productRepository.findAll());
+//        return "reviews";
+//    }
 
 
 }
