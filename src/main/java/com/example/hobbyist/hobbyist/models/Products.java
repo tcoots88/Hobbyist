@@ -10,10 +10,16 @@ public class Products {
     String title;
     String productDescription;
     String img;
+
     
    public static List<Products> productsList = new ArrayList<Products>();
 
     static {
+
+        productsList.add(  new Products("/images/soccer.jpg", "Soccer", "content here"  ));
+        productsList.add(  new Products("/images/knitting.jpg", "Knitting", "content here"  ));
+        productsList.add(  new Products("/images/hiking.jpg", "Hiking", "content here"  ));
+
         productsList.add(  new Products("/images/Woodcarving.jpg", "WoodWorking", "Wood carving is a form of woodworking by means of a cutting tool or chisel resulting in a wooden figure or figurine"  ));
         productsList.add(  new Products("/images/Pyrography.jpg", "Pyrography", "The free handed art of decorating wood or other materials with burn marks resulting from the controlled application of a heated object"  ));
         productsList.add(  new Products("/images/bonkei.jpg", "Bonkei", "A bonkei contains no living material and is a three-dimensional depiction of a landscape in miniature, portrayed using mainly dry materials like rock, papier-mâché or cement mixtures, and sand in a shallow tray"  ));
@@ -35,21 +41,17 @@ public class Products {
         return id;
     }
 
-    //System.out.println();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
 
 
-    //this may need to change
     @ManyToOne
     public ApplicationUser applicationUser;
 
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy=  "products")
     private Set<Review> reviews;
-//    Reviews review;
-
 
 
     public Products(String img, String title, String productDescription){
@@ -86,10 +88,6 @@ public class Products {
     public void setReviews(List<Review> reviews) {
         this.reviews = (Set<Review>) reviews;
     }
-
-
-
-
 
     public String getProductDescription() {
         return productDescription;

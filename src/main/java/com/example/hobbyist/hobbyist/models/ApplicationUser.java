@@ -39,7 +39,7 @@ public class ApplicationUser implements UserDetails {
         this.password = password;
 
     }
-
+    
         // Empty constructor
         public ApplicationUser(){
 

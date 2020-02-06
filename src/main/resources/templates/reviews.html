@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title> Reviews </title>
@@ -12,8 +13,8 @@
 
 <h1>Product Reviews</h1>
 
-<div th:each="review : ${reviews}">
-    <a th:href="'/reviews/'+${review.title}">Hey</a>
+<div th:each="review : ${reviewedProduct}">
+   Great product <p>[[${review.title}]]</p>
 </div>
 </body>
 </html>
