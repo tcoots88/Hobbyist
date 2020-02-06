@@ -106,6 +106,8 @@ label{
 
 #FitnessLabel{
    background-image: url(../images/fitness.jpg);
+      border-radius:60px;
+
 }
 
 #SewingLabel{
