@@ -9,6 +9,9 @@ public class Products {
 
     String title;
     String productDescription;
+
+
+
     String img;
 
     
@@ -81,6 +84,10 @@ public class Products {
     //GETTERS
     public String getTitle() {
         return title;
+    }
+
+    public String getImg() {
+        return this.img;
     }
 
     public Set<Review> getReviews() {
