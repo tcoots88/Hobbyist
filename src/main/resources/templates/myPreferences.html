@@ -17,7 +17,9 @@
     <p>[[${currentUser.username}]] [[${currentUser.firstName}]]</p>
 
 </div>
-
+<ul>
+    <li th:each="preference: ${loggedInUser.savedProductsList}">
+        <p th:text="${preference.title}">Hey</p>
 <ul id="listingId" >
     <li th:each="preference: ${loggedInUser.savedProductsList}" id="prefListItemId">
         <p th:text="${preference.title}"></p>
@@ -31,7 +33,6 @@
         <form th:action="'/myPreferences/addToCart/' + ${preference.Id}" method = "POST">
             <button type="submit" class="btn btn-primary btn-block btn-large">Make Current Box</button>
         </form>
-
     </li>
 </ul>
 </body>
