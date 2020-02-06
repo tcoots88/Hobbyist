@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>My Preferences</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+
+<h1>Your Chosen Box For This Month</h1>
+
+<center>
+        <p th:text="${checkout.title}"></p>
+
+    <div th:id="${checkout.title}" class="cartClass">
+        <p th:id="${checkout.title + 'Label'}" class="cartClass"></p>
+    </div>
+
+</center>
+
+</body>
+</html>

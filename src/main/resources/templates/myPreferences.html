@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>My Preferences</title>
@@ -13,6 +14,7 @@
 <h1>These are the list of products you are subscribed to</h1>
 <div th:each="currentUser : ${allUsers}">
     <p>[[${currentUser.username}]] [[${currentUser.firstName}]]</p>
+
 </div>
 
 <ul id="listingId" >
@@ -22,6 +24,12 @@
         <div th:id="${preference.title + 'Label'}" class="prefProductClass">
         </div>
 
+        <form th:action="'/myPreferences/delete/' + ${preference.Id}" method = "POST">
+            <button type="submit">Delete</button>
+        </form>
+        <form th:action="'/myPreferences/addToCart/' + ${preference.Id}" method = "POST">
+            <button type="submit">Make Current Box</button>
+        </form>
 
     </li>
 </ul>

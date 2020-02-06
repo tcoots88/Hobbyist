@@ -26,10 +26,14 @@ public class Products {
 
     }
 
+    public long getId() {
+        return Id;
+    }
+
     //System.out.println();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long Id;
+    public long Id;
 
     //this may need to change
     @ManyToOne
