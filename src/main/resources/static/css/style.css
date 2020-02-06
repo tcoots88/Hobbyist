@@ -83,17 +83,17 @@ label{
 
 }
 /* ------------------------------------------------------------------ */
-#LeatherworkingLabel{
-   background-image: url(../images/leatherWorking.png);
+#LeatherWorkingLabel{
+   background-image: url(../images/leather.jpg);
 }
 
 #WoodWorkingLabel{
-   background-image: url(../images/Woodcarving.jpg);
+   background-image: url(../images/WoodWorking.jpg);
    background-size: contain;
 }
 
 #PyrographyLabel{
-   background-image: url(../images/Pyrography.jpg);
+   background-image: url(../images/pyrography.jpg);
 }
 
 #BonkeiLabel{
@@ -109,7 +109,7 @@ label{
 }
 
 #SewingLabel{
-   background-image: url(../images/sewing.jpg);
+   background-image: url(../images/sewingmachine.jpg);
 }
 
 #CandleMakingLabel{
@@ -130,6 +130,9 @@ label{
 
 #TeaLabel{
    background-image: url(../images/tea.jpg);
+}
+#LockPickingLabel{
+   background-image: url(../images/lockpicking.jpg);
 }
 
 #listingId{

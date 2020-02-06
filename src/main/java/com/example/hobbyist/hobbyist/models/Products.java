@@ -10,6 +10,7 @@ public class Products {
     String title;
     String productDescription;
     String img;
+    
    public static List<Products> productsList = new ArrayList<Products>();
 
     static {
@@ -23,17 +24,20 @@ public class Products {
         productsList.add(  new Products("/images/Jewelry.jpg", "JewelryMaking", "content here"  ));
         productsList.add(  new Products("/images/puzzles.jpg", "Puzzles", "content here"  ));
         productsList.add(  new Products("/images/essentialOil.jpg", "EssentialOils", "content here"  ));
+        productsList.add(  new Products("/images/lockpicking.jpg", "LockPicking", "content here"  ));
+        productsList.add(  new Products("/images/leatherWorking.png", "LeatherWorking", "content here"  ));
+        productsList.add(  new Products("/images/tea.jpg", "Tea", "content here"  ));
 
     }
 
     public long getId() {
-        return Id;
+        return id;
     }
 
     //System.out.println();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public long Id;
+    public long id;
 
     //this may need to change
     @ManyToOne
