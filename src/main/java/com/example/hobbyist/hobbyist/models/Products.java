@@ -13,7 +13,7 @@ public class Products {
 
 
     String img;
-    String review;
+    String ProductReview;
 
     
    public static List<Products> productsList = new ArrayList<Products>();
@@ -59,11 +59,13 @@ public class Products {
     private Set<Review> reviews;
 
 
-    public Products(String img, String title, String productDescription, String review){
+
+
+    public Products(String img, String title, String productDescription, String ProductReview){
         this.img = img;
         this.title = title;
         this.productDescription = productDescription;
-        this.review = review;
+        this.ProductReview = ProductReview;
     }
 
     public Products(ApplicationUser userPreferences, String img, String title, String productDescription) {
@@ -86,6 +88,10 @@ public class Products {
     //GETTERS
     public String getTitle() {
         return title;
+    }
+
+    public String getProductReview() {
+        return ProductReview;
     }
 
     public String getImg() {
