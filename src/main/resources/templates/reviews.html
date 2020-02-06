@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title> Reviews </title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/LoginStyle.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<div th:replace="fragments/header :: header">...</div>
+
 <h1>Product Reviews</h1>
 
 <div th:each="review : ${reviews}">
