@@ -18,6 +18,9 @@ public class ApplicationUserController {
     @Autowired
     ApplicationUserRepository applicationUserRepository;
 
+    @Autowired
+    ProductRepository productRepository;
+
     @Autowired private PasswordEncoder passwordEncoder;
 
     @PostMapping("/signup")
@@ -55,21 +58,21 @@ public class ApplicationUserController {
         return "myPreferences";
     }
 
-    @GetMapping("/review/{id}")
+    @GetMapping("/reviews/{id}")
     public String showProductReviews(@PathVariable long id, Principal p, Model m){
-        ApplicationUser userWeAreVisiting = applicationUserRepository.findById(id).get();
-        ApplicationUser loggedInUser = applicationUserRepository.findByUsername(p.getName());
+        Products userWeAreVisiting = productRepository.findById(id).get();
+//        Products loggedInUser = productRepository.findByUsername(p.getName());
         m.addAttribute("userWeAreVisiting", userWeAreVisiting);
-        m.addAttribute("loggedInUser", loggedInUser);
+//        m.addAttribute("loggedInUser", loggedInUser);
         return "reviews";
     }
 
-    @GetMapping("/review")
+    @GetMapping("/reviews")
     public String getAllReviews(Principal p, Model m){
         if(p != null){
             m.addAttribute("review", p);
         }
-        m.addAttribute("reviews", applicationUserRepository.findAll());
+        m.addAttribute("reviews", productRepository.findAll());
         return "reviews";
     }
 

@@ -8,7 +8,7 @@
 <h1>Product Reviews</h1>
 
 <div th:each="review : ${reviews}">
-    <a th:href="'/review/'+${review.id}">[[${user.body}]]</a>
+    <a th:href="'/reviews/'+${review.id}">[[${user.body}]]</a>
 </div>
 </body>
 </html>

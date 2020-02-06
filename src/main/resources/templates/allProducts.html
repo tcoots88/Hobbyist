@@ -20,7 +20,7 @@
         </div>
         <p>[[${product.title}]]</p>
         <p>anything</p>
-        <input type="button" onclick="/review" class="button" value="Reviews">
+        <a th:href="'/reviews/'+${product.id}">Reviews</a>
 
     </li>
 </ul>

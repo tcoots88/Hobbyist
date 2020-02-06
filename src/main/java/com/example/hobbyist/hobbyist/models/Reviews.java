@@ -6,7 +6,9 @@ import javax.persistence.*;
 public class Reviews {
 
     String body;
-    @javax.persistence.Id
+
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
@@ -27,6 +29,10 @@ public class Reviews {
     //GETTERS
     public ApplicationUser getApplicationUser() {
         return applicationUser;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getBody() {

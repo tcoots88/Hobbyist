@@ -26,10 +26,11 @@ public class Products {
 
     }
 
+
     //System.out.println();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long Id;
+    long id;
 
     //this may need to change
     @ManyToOne
@@ -67,6 +68,11 @@ public class Products {
     public String getTitle() {
         return title;
     }
+
+    public long getId() {
+        return id;
+    }
+
 
     public String getDescription() {
         return productDescription;
