@@ -87,10 +87,6 @@ public class Products {
         this.reviews = (Set<Review>) reviews;
     }
 
-
-
-
-
     public String getDescription() {
         return productDescription;
     }
