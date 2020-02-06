@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>My Preferences</title>
+    <link rel="stylesheet" href="/css/loginStyle.css">
     <link rel="stylesheet" href="/css/style.css">
+
 </head>
 <body>
 
@@ -19,7 +21,27 @@
         <p th:id="${checkout.title + 'Label'}" class="cartClass"></p>
     </div>
 
-</center>
 
+
+    <div class="login">
+        <form action="/myPreferences" method="POST">
+            <label for="username">Card Holder Name</label>
+            <input type="text" name="username" placeholder="Card Holder Name...">
+            <label for="password">Credit Card</label>
+            <input type="password" placeholder="Credit Card" name="password">
+            <label for="password">CVV</label>
+            <input type="password" placeholder="CVV" name="password">
+            <button type="submit" class="btn btn-primary btn-block btn-large">SUBMIT</button>
+
+        </form>
+
+
+
+
+
+
+
+</center>
 </body>
+
 </html>
