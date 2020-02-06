@@ -17,19 +17,18 @@
 
 <form action="/myPreferences" method="POST" id="formId">
 <ul id="listingId">
-    <li th:each="product: ${productsList}" id="listItemId">
+    <li th:each="product: ${productsList}" id="listItemId" class="listItemClass">
         <div th:id="${product.title}" class="productClass">
             <input type="checkbox" th:id="${product.title + 'Input'}" th:name="${product.title}">
             <label th:id="${product.title + 'Label'}" th:for="${product.title + 'Input'}"></label>
         </div>
         <p>[[${product.title}]]</p>
-        <p th:text="${product.productDescription}"></p>
-        <a th:href="'/reviews/'+${product.title}">Reviews</a>
-
+        <p th:text="${product.productDescription}" id="productDescription"></p>
+        <a th:action="'/reviews/'+${product.title}"> <button  class="btn btn-primary btn-block btn-large">Reviews</button></a>
     </li>
 </ul>
 
-    <button name="Subscribe" type="submit" class="button">Subscribe</button>
+    <button name="Subscribe" type="submit" class="button" id="subscribeButton">Subscribe</button>
 
 </form>
 <!--<form action="/reviews" method="POST" id="reviewsId">-->

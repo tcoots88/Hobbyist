@@ -142,6 +142,7 @@ label{
    list-style: none;
    display: inline-flex;
    flex-wrap: wrap;
+   justify-content: center;
 }
 
 .title{
@@ -158,6 +159,8 @@ label{
 
 .productClass{
    text-align: center;
+   width: 300px;
+
 }
 .prefProductClass{
 height: 300px;
@@ -179,6 +182,8 @@ width: 300px;
 }
 #prefListItemId{
 padding: 1em;
+margin-left: .5em;
+margin-right: .5em;
 }
 
 .cartClass{
@@ -193,10 +198,19 @@ width: 300px;
    width: 300px;
    border-radius:50px;
 }
-p{
+#productDescription{
 width: 300px;
+height: 130px;
 }
 
+#subscribeButton{
+justify-content: center;
+}
+
+.listItemClass{
+margin-left: .5em;
+margin-right: .5em;
+}
 
 
 
