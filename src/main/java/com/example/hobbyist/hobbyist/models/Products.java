@@ -16,9 +16,10 @@ public class Products {
 
     static {
 
-        productsList.add(  new Products("/images/soccer.jpg", "Soccer", "content here"  ));
-        productsList.add(  new Products("/images/knitting.jpg", "Knitting", "content here"  ));
-        productsList.add(  new Products("/images/hiking.jpg", "Hiking", "content here"  ));
+        productsList.add(  new Products("/images/soccer.jpg", "Soccer", "Get fit and improve your coordination while learning to play soccer. This kit will get you well on your way to playing the beautiful game"  ));
+
+        productsList.add(  new Products("/images/knitting.jpg", "Knitting", "Learn why knitting is becoming one of the most recommended practices to fight stress. With this kit you get to create awesome wool products all while relaxing."  ));
+        productsList.add(  new Products("/images/hiking.jpg", "Hiking", "We can't think of a better way to get fit then to explore the wilderness while hiking. This box comes with maps of your local trails and advice on pacing and safety."  ));
 
         productsList.add(  new Products("/images/Woodcarving.jpg", "WoodWorking", "Wood carving is a form of woodworking by means of a cutting tool or chisel resulting in a wooden figure or figurine"  ));
         productsList.add(  new Products("/images/Pyrography.jpg", "Pyrography", "The free handed art of decorating wood or other materials with burn marks resulting from the controlled application of a heated object"  ));
