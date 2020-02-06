@@ -10,23 +10,29 @@ public class Products {
     String title;
     String productDescription;
     String img;
+
     
    public static List<Products> productsList = new ArrayList<Products>();
 
     static {
-        productsList.add(  new Products("/images/Woodcarving.jpg", "WoodWorking", "content here"  ));
-        productsList.add(  new Products("/images/Pyrography.jpg", "Pyrography", "content here"  ));
-        productsList.add(  new Products("/images/bonkei.jpg", "Bonkei", "content here"  ));
-        productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
-        productsList.add(  new Products("/images/fitness.jpg", "Fitness", "content here"  ));
-        productsList.add(  new Products("/images/sewing.jpg", "Sewing", "content here"  ));
-        productsList.add(  new Products("/images/CandleMaking.jpg", "CandleMaking", "content here"  ));
-        productsList.add(  new Products("/images/Jewelry.jpg", "JewelryMaking", "content here"  ));
-        productsList.add(  new Products("/images/puzzles.jpg", "Puzzles", "content here"  ));
-        productsList.add(  new Products("/images/essentialOil.jpg", "EssentialOils", "content here"  ));
-        productsList.add(  new Products("/images/lockpicking.jpg", "LockPicking", "content here"  ));
-        productsList.add(  new Products("/images/leatherWorking.png", "LeatherWorking", "content here"  ));
-        productsList.add(  new Products("/images/tea.jpg", "Tea", "content here"  ));
+
+        productsList.add(  new Products("/images/soccer.jpg", "Soccer", "content here"  ));
+        productsList.add(  new Products("/images/knitting.jpg", "Knitting", "content here"  ));
+        productsList.add(  new Products("/images/hiking.jpg", "Hiking", "content here"  ));
+
+        productsList.add(  new Products("/images/Woodcarving.jpg", "WoodWorking", "Wood carving is a form of woodworking by means of a cutting tool or chisel resulting in a wooden figure or figurine"  ));
+        productsList.add(  new Products("/images/Pyrography.jpg", "Pyrography", "The free handed art of decorating wood or other materials with burn marks resulting from the controlled application of a heated object"  ));
+        productsList.add(  new Products("/images/bonkei.jpg", "Bonkei", "A bonkei contains no living material and is a three-dimensional depiction of a landscape in miniature, portrayed using mainly dry materials like rock, papier-mâché or cement mixtures, and sand in a shallow tray"  ));
+        productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "A Japanese art form using cultivation techniques to produce, in containers, small trees that mimic the shape and scale of full size trees"  ));
+        productsList.add(  new Products("/images/fitness.jpg", "Fitness", "Improve your state of health and well-being by receiving this kit to get started on your new fitness regime"  ));
+        productsList.add(  new Products("/images/sewing.jpg", "Sewing", "The craft of fastening or attaching objects using stitches made with a needle and thread."  ));
+        productsList.add(  new Products("/images/CandleMaking.jpg", "CandleMaking", "Everything needed to started making your own container candles, including wicks, fragrance oils and three types of wax,"  ));
+        productsList.add(  new Products("/images/Jewelry.jpg", "JewelryMaking", "Create your own homemade jewelry with this starter including string, beads, and all the necessary tools needed to get started"  ));
+        productsList.add(  new Products("/images/puzzles.jpg", "Puzzles", "Subscribe to this ox to receive multiple puzzles including tradition jigsaw as well as others like mechanical, mathematical, and more"  ));
+        productsList.add(  new Products("/images/essentialOil.jpg", "EssentialOils", "An essential oil is a concentrated hydrophobic liquid containing volatile chemical compounds from plants. This box will include 12 3-oz bottles and a diffuser"  ));
+        productsList.add(  new Products("/images/lockpicking.jpg", "LockPicking", "Lock picking is the practice of unlocking a lock by manipulating the components of the lock device without the original key.  This box includes 10 practice locks varying in difficulty along with a lockpicking kit"  ));
+        productsList.add(  new Products("/images/leatherWorking.png", "LeatherWorking", "Leather Working is the practice of making leather into craft objects or works of art, using shaping techniques, coloring techniques or both.  With this kit, you will be able to craft your own leather products"  ));
+        productsList.add(  new Products("/images/tea.jpg", "Tea", "This box will include 6 teas in a variety of types as well as a matcha kit, two types of infusers, and a tea set"  ));
 
     }
 
@@ -35,21 +41,17 @@ public class Products {
         return id;
     }
 
-    //System.out.println();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
 
 
-    //this may need to change
     @ManyToOne
     public ApplicationUser applicationUser;
 
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy=  "products")
     private Set<Review> reviews;
-//    Reviews review;
-
 
 
     public Products(String img, String title, String productDescription){
@@ -87,11 +89,7 @@ public class Products {
         this.reviews = (Set<Review>) reviews;
     }
 
-
-
-
-
-    public String getDescription() {
+    public String getProductDescription() {
         return productDescription;
     }
 

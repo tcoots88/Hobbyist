@@ -23,17 +23,13 @@
             <label th:id="${product.title + 'Label'}" th:for="${product.title + 'Input'}"></label>
         </div>
         <p>[[${product.title}]]</p>
-        <p>anything</p>
+        <p th:text="${product.productDescription}"></p>
         <a th:href="'/reviews/'+${product.title}">Reviews</a>
 
     </li>
 </ul>
 
     <button name="Subscribe" type="submit" class="button">Subscribe</button>
-
 </form>
-<!--<form action="/reviews" method="POST" id="reviewsId">-->
-<!--    <button name="reviews" type="submit" class="button">Reviews</button>-->
-<!--</form>-->
 </body>
 </html>
