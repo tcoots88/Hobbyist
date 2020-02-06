@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>All Products</title>
-<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/LoginStyle.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<div th:replace="fragments/header :: header">...</div>
+
 <h1>Products</h1>
 <h2>Please select as many hobbies as you would like to try</h2>
 <h4>You will receive a box pertaining to one of your selections on each delivery</h4>
@@ -19,7 +23,7 @@
             <label th:id="${product.title + 'Label'}" th:for="${product.title + 'Input'}"></label>
         </div>
         <p>[[${product.title}]]</p>
-        <p>anything</p>
+        <p th:text="${product.productDescription}"></p>
         <a th:href="'/reviews/'+${product.title}">Reviews</a>
 
     </li>
