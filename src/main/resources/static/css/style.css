@@ -117,6 +117,17 @@ label{
 #CandleMakingLabel{
    background-image: url(../images/CandleMaking.jpg);
 }
+#SoccerLabel{
+   background-image: url(../images/soccer.jpg);
+}
+#HikingLabel{
+   background-image: url(../images/hiking.jpg);
+}
+#KnittingLabel{
+   background-image: url(../images/knitting.jpg);
+}
+
+
 
 #JewelryMakingLabel{
    background-image: url(../images/Jewelry.jpg);
@@ -192,6 +203,9 @@ width: 300px;
    height: 200px;
    width: 300px;
    border-radius:50px;
+}
+p{
+width: 300px;
 }
 
 
