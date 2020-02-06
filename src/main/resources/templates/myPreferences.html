@@ -22,7 +22,7 @@
 <ul id="listingId" >
     <li th:each="preference: ${loggedInUser.savedProductsList}" id="prefListItemId">
         <p th:text="${preference.title}"></p>
-        <p>anything</p>
+        <p th:text="${preference.productDescription}"></p>
         <div th:id="${preference.title + 'Label'}" class="prefProductClass">
         </div>
 
