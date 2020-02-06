@@ -1,6 +1,11 @@
 package com.example.hobbyist.hobbyist.models;
 
+import com.example.hobbyist.hobbyist.models.ApplicationUser;
+import com.example.hobbyist.hobbyist.models.ApplicationUserRepository;
+import com.example.hobbyist.hobbyist.models.ProductRepository;
+import com.example.hobbyist.hobbyist.models.Products;
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import com.sun.tools.javac.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -11,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.security.Principal;
+import java.util.ArrayList;
 
 @Controller
 public class ApplicationUserController {
@@ -52,16 +58,19 @@ public class ApplicationUserController {
     public String showPreferences(Principal p, Model m){
         ApplicationUser loggedInUser = applicationUserRepository.findByUsername(p.getName());
         m.addAttribute("loggedInUser", loggedInUser);
-        m.addAttribute("userWeAreVisiting", loggedInUser.Id);
+        m.addAttribute("userWeAreVisiting", loggedInUser.id);
         m.addAttribute("userWeVisited", loggedInUser);
         System.out.println("loggedInUser = " + loggedInUser);
         return "myPreferences";
     }
 
-    @GetMapping("/reviews/{id}")
-    public String showProductReviews(@PathVariable long id, Principal p, Model m){
-        Products userWeAreVisiting = productRepository.findById(id).get();
-//        Products loggedInUser = productRepository.findByUsername(p.getName());
+    @GetMapping("/reviews/{title}")
+    public String showProductReviews(@PathVariable String title, Principal p, Model m){
+        ArrayList<Products> userWeAreVisiting = productRepository.findByTitle(title);
+//        System.out.println("userWeAreVisiting = " + userWeAreVisiting);
+        System.out.println("is this the right id" + title);
+//                Products loggedInUser = productRepository.findById(id).get();
+//        Products loggedInUser = productRepository.findById(p.getName());
         m.addAttribute("userWeAreVisiting", userWeAreVisiting);
 //        m.addAttribute("loggedInUser", loggedInUser);
         return "reviews";

@@ -1,9 +1,11 @@
 package com.example.hobbyist.hobbyist.models;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 @Entity
-public class Reviews {
+public class Review {
 
     String body;
 
@@ -14,22 +16,25 @@ public class Reviews {
 
     //this may need to change
    @ManyToOne
+   @JoinColumn(name = "products")
+   private Products products;
+
    ApplicationUser applicationUser;
 
-    public Reviews(ApplicationUser applicationUser, String body){
+    public Review(ApplicationUser applicationUser, String body){
         this.applicationUser = applicationUser;
         this.body = body;
 
         }
 
-        public Reviews(){
+        public Review(){
 
         }
 
     //GETTERS
-    public ApplicationUser getApplicationUser() {
-        return applicationUser;
-    }
+//    public ApplicationUser getApplicationUser() {
+//        return applicationUser;
+//    }
 
     public long getId() {
         return id;
@@ -40,4 +45,7 @@ public class Reviews {
     }
 
 
+    public void setProducts(List<Products> productsList) {
+
+    }
 }

@@ -26,7 +26,6 @@ public class Products {
 
     }
 
-
     //System.out.println();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,8 +35,10 @@ public class Products {
     @ManyToOne
     public ApplicationUser applicationUser;
 
-    @ManyToOne
-    Reviews review;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy=  "products")
+    private Set<Review> reviews;
+//    Reviews review;
 
 
 
@@ -69,6 +70,14 @@ public class Products {
         return title;
     }
 
+    public Set<Review> getReviews() {
+        return reviews;
+    }
+    public void setReviews(List<Review> reviews) {
+        this.reviews = (Set<Review>) reviews;
+    }
+
+
     public long getId() {
         return id;
     }
@@ -81,10 +90,5 @@ public class Products {
     public ApplicationUser getApplicationUser() {
         return applicationUser;
     }
-
-    public Reviews getReview() {
-        return review;
-    }
-
 
 }
