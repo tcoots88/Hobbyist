@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>My Preferences</title>
+    <link rel="stylesheet" href="/css/LoginStyle.css">
+    <link rel="stylesheet" href="/css/style.css">
+
 </head>
 <body>
 
@@ -11,12 +15,22 @@
 <h1>These are the list of products you are subscribed to</h1>
 <div th:each="currentUser : ${allUsers}">
     <p>[[${currentUser.username}]] [[${currentUser.firstName}]]</p>
+
 </div>
 
-<ul>
-    <li th:each="preference: ${loggedInUser.savedProductsList}">
-        <p th:text="${preference.title}">Hey</p>
+<ul id="listingId" >
+    <li th:each="preference: ${loggedInUser.savedProductsList}" id="prefListItemId">
+        <p th:text="${preference.title}"></p>
+        <p>anything</p>
+        <div th:id="${preference.title + 'Label'}" class="prefProductClass">
+        </div>
 
+        <form th:action="'/myPreferences/delete/' + ${preference.Id}" method = "POST">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Delete</button>
+        </form>
+        <form th:action="'/myPreferences/addToCart/' + ${preference.Id}" method = "POST">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Make Current Box</button>
+        </form>
 
     </li>
 </ul>

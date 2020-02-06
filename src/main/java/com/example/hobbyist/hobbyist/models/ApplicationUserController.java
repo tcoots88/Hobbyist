@@ -53,7 +53,25 @@ public class ApplicationUserController {
         m.addAttribute("userWeVisited", loggedInUser);
         System.out.println("loggedInUser = " + loggedInUser);
         return "myPreferences";
-
     }
+
+    @GetMapping("/review/{id}")
+    public String showProductReviews(@PathVariable long id, Principal p, Model m){
+        ApplicationUser userWeAreVisiting = applicationUserRepository.findById(id).get();
+        ApplicationUser loggedInUser = applicationUserRepository.findByUsername(p.getName());
+        m.addAttribute("userWeAreVisiting", userWeAreVisiting);
+        m.addAttribute("loggedInUser", loggedInUser);
+        return "reviews";
+    }
+
+    @GetMapping("/review")
+    public String getAllReviews(Principal p, Model m){
+        if(p != null){
+            m.addAttribute("review", p);
+        }
+        m.addAttribute("reviews", applicationUserRepository.findAll());
+        return "reviews";
+    }
+
 
 }
