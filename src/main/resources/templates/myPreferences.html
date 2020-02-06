@@ -11,7 +11,7 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
-<h1>This is [[${loggedInUser.firstName}]]'s detail page, you are on their page [[${userWeVisited.username}]]</h1>
+<h1>This is [[${loggedInUser.firstName}]]'s preferences page.</h1>
 
 <h1>These are the list of products you are subscribed to</h1>
 <div th:each="currentUser : ${allUsers}">

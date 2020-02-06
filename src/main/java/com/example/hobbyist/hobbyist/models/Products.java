@@ -41,20 +41,17 @@ public class Products {
         return id;
     }
 
-    //System.out.println();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
 
 
-    //this may need to change
     @ManyToOne
     public ApplicationUser applicationUser;
 
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy=  "products")
     private Set<Review> reviews;
-//    Reviews review;
 
 
     public Products(String img, String title, String productDescription){
@@ -91,10 +88,6 @@ public class Products {
     public void setReviews(List<Review> reviews) {
         this.reviews = (Set<Review>) reviews;
     }
-
-
-
-
 
     public String getProductDescription() {
         return productDescription;
