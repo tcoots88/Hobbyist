@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>My Preferences</title>
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/LoginStyle.css">
     <link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body>
-
+<div th:replace="fragments/header :: header">...</div>
 <h1>This is [[${loggedInUser.firstName}]]'s detail page, you are on their page [[${userWeVisited.username}]]</h1>
 
 <h1>These are the list of products you are subscribed to</h1>
