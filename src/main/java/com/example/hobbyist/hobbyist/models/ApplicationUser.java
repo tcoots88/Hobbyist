@@ -40,7 +40,6 @@ public class ApplicationUser implements UserDetails {
 
     }
     
-
         // Empty constructor
         public ApplicationUser(){
 
