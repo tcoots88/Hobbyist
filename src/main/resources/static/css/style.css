@@ -154,7 +154,26 @@ label{
 .productClass{
    text-align: center;
 }
+.prefProductClass{
+height: 300px;
+width: 300px;
+   background-repeat: no-repeat;
+   text-align: center;
+   background-size: contain;
+   background-position: center;
+   height: 200px;
+   width: 300px;
+   border-radius:50px;
+}
 
+#prefList{
+   text-align: center;
+   list-style: none;
+   justify-content: center;
+}
+#prefListItemId{
+padding: 1em;
+}
 
 
 
