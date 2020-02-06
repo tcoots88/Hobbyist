@@ -18,9 +18,7 @@
     <p>[[${currentUser.username}]] [[${currentUser.firstName}]]</p>
 
 </div>
-<ul>
-    <li th:each="preference: ${loggedInUser.savedProductsList}">
-        <p th:text="${preference.title}">Hey</p>
+
 <ul id="listingId" >
     <li th:each="preference: ${loggedInUser.savedProductsList}" id="prefListItemId">
         <p th:text="${preference.title}"></p>
