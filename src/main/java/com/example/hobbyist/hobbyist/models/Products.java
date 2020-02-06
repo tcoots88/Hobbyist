@@ -10,6 +10,7 @@ public class Products {
     String title;
     String productDescription;
     String img;
+
     
    public static List<Products> productsList = new ArrayList<Products>();
 
@@ -17,8 +18,8 @@ public class Products {
         productsList.add(  new Products("/images/Woodcarving.jpg", "WoodWorking", "content here"  ));
         productsList.add(  new Products("/images/Pyrography.jpg", "Pyrography", "content here"  ));
         productsList.add(  new Products("/images/bonkei.jpg", "Bonkei", "content here"  ));
+        productsList.add(  new Products("/images/soccer.jpg", "Soccer", "content here"  ));
         productsList.add(  new Products("/images/bonsai.jpg", "Bonsai", "content here"  ));
-        productsList.add(  new Products("/images/fitness.jpg", "Fitness", "content here"  ));
         productsList.add(  new Products("/images/sewing.jpg", "Sewing", "content here"  ));
         productsList.add(  new Products("/images/CandleMaking.jpg", "CandleMaking", "content here"  ));
         productsList.add(  new Products("/images/Jewelry.jpg", "JewelryMaking", "content here"  ));
@@ -27,6 +28,9 @@ public class Products {
         productsList.add(  new Products("/images/lockpicking.jpg", "LockPicking", "content here"  ));
         productsList.add(  new Products("/images/leatherWorking.png", "LeatherWorking", "content here"  ));
         productsList.add(  new Products("/images/tea.jpg", "Tea", "content here"  ));
+        productsList.add(  new Products("/images/fitness.jpg", "Fitness", "content here"  ));
+        productsList.add(  new Products("/images/knitting.jpg", "Knitting", "content here"  ));
+        productsList.add(  new Products("/images/hiking.jpg", "Hiking", "content here"  ));
 
     }
 
@@ -49,7 +53,6 @@ public class Products {
     @OneToMany(cascade = CascadeType.ALL, mappedBy=  "products")
     private Set<Review> reviews;
 //    Reviews review;
-
 
 
     public Products(String img, String title, String productDescription){

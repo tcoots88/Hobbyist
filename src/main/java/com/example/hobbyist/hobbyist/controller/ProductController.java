@@ -45,6 +45,9 @@ public class ProductController {
 
 
 
+
+
+
     @PostMapping("/myPreferences/delete/{id}")
     public RedirectView delete(@PathVariable long id){
         productRepository.deleteById(id);
