@@ -47,7 +47,7 @@ public class ProductController {
 
 
     @PostMapping("/myPreferences")
-    public RedirectView createUserPreferences(String img, String title, String productDescription, Principal p, Model m, boolean Bonsai, boolean WoodWorking, boolean Pyrography, boolean Bonkei, boolean Fitness, boolean Sewing, boolean CandleMaking, boolean JewelryMaking, boolean Puzzles, boolean EssentialOils ) {
+    public RedirectView createUserPreferences(String img, String title, String productDescription, Principal p, Model m, boolean Bonsai, boolean WoodWorking, boolean Pyrography, boolean Bonkei, boolean Fitness, boolean Sewing, boolean CandleMaking, boolean JewelryMaking, boolean Puzzles, boolean EssentialOils, boolean LockPicking, boolean LeatherWorking, boolean Tea , boolean Soccer, boolean Knitting, boolean Hiking) {
         if (p != null) {
             ApplicationUser userPreferences = applicationUserRepository.findByUsername(p.getName());
 
@@ -110,6 +110,41 @@ public class ProductController {
                 essentialoils.applicationUser = userPreferences;
                 productRepository.save(essentialoils);
             }
+            if (LockPicking) {
+                Products lockpicking = Products.productsList.get(10);
+                lockpicking.applicationUser = userPreferences;
+                productRepository.save(lockpicking);
+            }
+            if (LeatherWorking) {
+                Products leatherworking = Products.productsList.get(11);
+                leatherworking.applicationUser = userPreferences;
+                productRepository.save(leatherworking);
+            }
+            if (Tea) {
+                Products tea = Products.productsList.get(12);
+                tea.applicationUser = userPreferences;
+                productRepository.save(tea);
+            }
+            if (Soccer) {
+                Products soccer = Products.productsList.get(13);
+                soccer.applicationUser = userPreferences;
+                productRepository.save(soccer);
+            }
+            if (Knitting) {
+                Products knitting = Products.productsList.get(14);
+                knitting.applicationUser = userPreferences;
+                productRepository.save(knitting);
+            }
+            if (Hiking) {
+                Products hiking = Products.productsList.get(15);
+                hiking.applicationUser = userPreferences;
+                productRepository.save(hiking);
+            }
+
+
+
+
+
 
             applicationUserRepository.save(userPreferences);
             }
