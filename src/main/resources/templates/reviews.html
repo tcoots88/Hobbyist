@@ -14,9 +14,10 @@
 <h1>Product Reviews</h1>
 
 <div th:each="review : ${reviewedProduct}">
-    Great product <p>[[${review.img}]]</p>
-    Great product <p>[[${review.title}]]</p>
-    Great product <p>[[${review.productDescription}]]</p>
+    <div th:id="${review.title + 'Label'}" class="prefProductClass">
+</div>
+    <p>[[${review.title}]]</p>
+    <p>[[${review.productDescription}]]</p>
     <p>[[${review.ProductReview}]]</p>
 </div>
 </body>
