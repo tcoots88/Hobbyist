@@ -2,12 +2,12 @@ package com.example.hobbyist.hobbyist.models;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 public class Review {
 
     String body;
+    String ProductReview;
 
 
     @Id
@@ -21,27 +21,30 @@ public class Review {
 
    ApplicationUser applicationUser;
 
-    public Review(ApplicationUser applicationUser, String body){
+
+    public Review(ApplicationUser applicationUser, String body, String ProductReview){
         this.applicationUser = applicationUser;
         this.body = body;
+        this.ProductReview = ProductReview;
 
-        }
+
+    }
 
         public Review(){
 
         }
 
     //GETTERS
-//    public ApplicationUser getApplicationUser() {
-//        return applicationUser;
-//    }
-
     public long getId() {
         return id;
     }
 
     public String getBody() {
         return body;
+    }
+
+    public String getProductReview() {
+        return ProductReview;
     }
 
 
