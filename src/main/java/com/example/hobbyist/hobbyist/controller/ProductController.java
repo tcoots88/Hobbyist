@@ -141,11 +141,6 @@ public class ProductController {
                 productRepository.save(hiking);
             }
 
-
-
-
-
-
             applicationUserRepository.save(userPreferences);
             }
     
