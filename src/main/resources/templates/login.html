@@ -14,7 +14,7 @@
 <div class="login">
 <form action="/login" method="POST">
     <label for="username">Username</label>
-    <input type="text" name="username" placeholder="Your username..." required>
+    <input type="text" name="username" onkeyup="this.value = this.value.toLowerCase();" placeholder="Your username..." required >
     <label for="password">Password</label>
     <input type="password" placeholder="Your password..." name="password" required>
     <button type="submit" class="btn btn-primary btn-block btn-large">Log In</button>
