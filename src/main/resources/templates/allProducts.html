@@ -24,7 +24,7 @@
         </div>
         <p>[[${product.title}]]</p>
         <p th:text="${product.productDescription}" id="productDescription"></p>
-        <a th:href="'/reviews/'+${product.title}"> Reviews</button></a>
+        <a th:href="'/reviews/'+${product.title}" id="reviewButton" class="btn btn-primary btn-block btn-large">Reviews</a>
     </li>
 </ul>
 
