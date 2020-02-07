@@ -29,7 +29,7 @@ public class ApplicationUserController {
 
         ApplicationUser newUser = new ApplicationUser(lastName, firstName, username, passwordEncoder.encode(password));
         applicationUserRepository.save(newUser);
-        return new RedirectView("/");
+        return new RedirectView("/login");
 
     }
 
