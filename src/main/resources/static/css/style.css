@@ -195,6 +195,7 @@ width: 300px;
 padding: 1em;
 margin-left: .5em;
 margin-right: .5em;
+width: 300px
 }
 
 .cartClass{
@@ -223,7 +224,27 @@ margin-left: .5em;
 margin-right: .5em;
 }
 
+#center{
+position: absolute;
+top: 50%;
+left: 50%;
+margin: -150px 0 0 -150px;
+width: 300px;
+height: 300px;
+}
+#cartDiv{
+top: 50%;
+left: 50%;
+width: 300px;
+height: 300px;
+}
 
+#reviewButton{
+    appearance: button;
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    text-decoration: none; font: menu; color: ButtonText;
 
+}
 
 

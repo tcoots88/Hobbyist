@@ -14,7 +14,7 @@
 
 <h1>Your Chosen Box For This Month</h1>
 
-<center>
+<center id="center">
         <p th:text="${checkout.title}"></p>
 
     <div th:id="${checkout.title}" class="cartClass">
@@ -22,7 +22,7 @@
     </div>
 
 
-    <div class="login">
+    <div id="cartDiv">
         <form action="/myPreferences" method="POST">
             <label for="username">Card Holder Name</label>
             <input type="text" name="username" placeholder="Card Holder Name...">
