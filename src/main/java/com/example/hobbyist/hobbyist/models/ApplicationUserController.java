@@ -30,12 +30,16 @@ public class ApplicationUserController {
         ApplicationUser newUser = new ApplicationUser(lastName, firstName, username, passwordEncoder.encode(password));
         applicationUserRepository.save(newUser);
         return new RedirectView("/login");
-
     }
 
     @GetMapping("/login")
     public String showLoginForm(){
         return "login";
+    }
+
+    @GetMapping("/signup")
+    public String showSignUpForm(){
+        return "signup";
     }
 
     @GetMapping("/users/{id}")
