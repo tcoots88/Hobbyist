@@ -11,13 +11,9 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
-<h1>This is [[${loggedInUser.firstName}]]'s preferences page.</h1>
 
-<h1>These are the list of products you are subscribed to</h1>
-<div th:each="currentUser : ${allUsers}">
-    <p>[[${currentUser.username}]] [[${currentUser.firstName}]]</p>
+<h1>This is the list of products [[${loggedInUser.firstName}]] is subscribed to</h1>
 
-</div>
 <div id="formId">
 <ul id="listingId" >
     <li th:each="preference: ${loggedInUser.savedProductsList}" id="listItemId" class="listItemClass">

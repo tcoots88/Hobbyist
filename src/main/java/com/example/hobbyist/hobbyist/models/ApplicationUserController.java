@@ -47,7 +47,7 @@ public class ApplicationUserController {
 
     @GetMapping("/signup")
     public String showSignUpForm(){
-        return "signup";
+        return "login";
     }
 
     @GetMapping("/users/{id}")
