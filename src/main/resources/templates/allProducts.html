@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>All Products</title>
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/LoginStyle.css">
+    <link rel="stylesheet" href="/css/loginStyle.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
         </div>
         <p>[[${product.title}]]</p>
         <p th:text="${product.productDescription}" id="productDescription"></p>
-        <a th:href="'/reviews/'+${product.title}" id="reviewButton" class="btn btn-primary btn-block btn-large">Reviews</a>
+        <a th:href="'/reviews/'+${product.id}" id="reviewButton" class="btn btn-primary btn-block btn-large">Reviews</a>
     </li>
 </ul>
 
