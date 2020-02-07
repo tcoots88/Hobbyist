@@ -1,33 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hobbyist</title>
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/loginStyle.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
 </head>
 <body>
-<div th:replace="fragments/header :: header">...</div>
-
-<h1>Welcome to Hobbyist! Please log in or sign up to have access.</h1>
-
-<div class="login">
-
-    <form action="/signup" method="POST">
-        <label for="lastName">Last Name</label>
-        <input type="text" name="lastName" required>
-        <label for="firstName">First Name</label>
-        <input type="text" name="firstName" required>
-        <label for="username">Username</label>
-        <input type="text" name="username" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" required>
-        <input type="submit" value="Submit" class="btn btn-primary btn-block btn-large">
-    </form>
-    <form action="/login"> <button  class="btn btn-primary btn-block btn-large">Login</button></form>
-</div>
+<a href="/signup">Create account</a>
+words
 
 </body>
 </html>
