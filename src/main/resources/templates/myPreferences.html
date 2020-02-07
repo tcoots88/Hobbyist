@@ -18,13 +18,19 @@
     <p>[[${currentUser.username}]] [[${currentUser.firstName}]]</p>
 
 </div>
-
+<div id="formId">
 <ul id="listingId" >
-    <li th:each="preference: ${loggedInUser.savedProductsList}" id="prefListItemId">
+    <li th:each="preference: ${loggedInUser.savedProductsList}" id="listItemId" class="listItemClass">
+        <div th:id="${preference.title}" class="productClass"></div>
+
         <p th:text="${preference.title}"></p>
-        <p th:text="${preference.productDescription}"></p>
+        <p th:text="${preference.productDescription}" id="productDescription"></p>
         <div th:id="${preference.title + 'Label'}" class="prefProductClass">
         </div>
+
+
+
+
 
         <form th:action="'/myPreferences/delete/' + ${preference.Id}" method = "POST">
             <button type="submit" class="btn btn-primary btn-block btn-large">Delete</button>
@@ -34,5 +40,6 @@
         </form>
     </li>
 </ul>
+</div>
 </body>
 </html>
