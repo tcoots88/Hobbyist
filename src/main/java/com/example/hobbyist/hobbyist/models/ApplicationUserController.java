@@ -30,10 +30,15 @@ public class ApplicationUserController {
     @PostMapping("/signup")
     public RedirectView createNewApplication(String lastName,String firstName, String username, String password){
 
+        if(applicationUserRepository.findByUsername(username.toLowerCase()) != null){
+            return new RedirectView("/signup");
+        }
+
         ApplicationUser newUser = new ApplicationUser(lastName, firstName, username, passwordEncoder.encode(password));
         applicationUserRepository.save(newUser);
-        return new RedirectView("/login");
-    }
+        return new RedirectView("/signup");
+        }
+
 
     @GetMapping("/login")
     public String showLoginForm(){
