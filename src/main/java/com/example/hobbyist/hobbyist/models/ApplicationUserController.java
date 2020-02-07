@@ -20,6 +20,9 @@ public class ApplicationUserController {
     ApplicationUserRepository applicationUserRepository;
 
     @Autowired
+    ReviewRepository reviewRepository;
+
+    @Autowired
     ProductRepository productRepository;
 
     @Autowired private PasswordEncoder passwordEncoder;
@@ -63,9 +66,9 @@ public class ApplicationUserController {
         return "myPreferences";
     }
 
-    @GetMapping("/reviews/{title}")
-    public String showProductReviews(@PathVariable String title, Principal p, Model m){
-        ArrayList<Products> reviewedProduct = productRepository.findByTitle(title);
+    @GetMapping("/reviews/{id}")
+    public String showProductReviews(@PathVariable long id, Principal p, Model m){
+        Products reviewedProduct = productRepository.findById(id).get();
         m.addAttribute("reviewedProduct", reviewedProduct);
         return "reviews";
     }
