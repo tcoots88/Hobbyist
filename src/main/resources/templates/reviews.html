@@ -16,9 +16,8 @@
 <div th:each="review : ${reviewedProduct}">
     <div th:id="${review.title + 'Label'}" class="prefProductClass">
 </div>
-    <p>[[${review.title}]]</p>
-    <p>[[${review.productDescription}]]</p>
-    <p>[[${review.ProductReview}]]</p>
+    Title: <p>[[${review.title}]]</p>
+    Reviews: <p>[[${review.ProductReview}]]</p>
 </div>
 </body>
 </html>
