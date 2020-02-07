@@ -20,6 +20,9 @@ public class ApplicationUserController {
     ApplicationUserRepository applicationUserRepository;
 
     @Autowired
+    ReviewRepository reviewRepository;
+
+    @Autowired
     ProductRepository productRepository;
 
     @Autowired private PasswordEncoder passwordEncoder;
@@ -27,10 +30,15 @@ public class ApplicationUserController {
     @PostMapping("/signup")
     public RedirectView createNewApplication(String lastName,String firstName, String username, String password){
 
+        if(applicationUserRepository.findByUsername(username.toLowerCase()) != null){
+            return new RedirectView("/signup");
+        }
+
         ApplicationUser newUser = new ApplicationUser(lastName, firstName, username, passwordEncoder.encode(password));
         applicationUserRepository.save(newUser);
-        return new RedirectView("/login");
-    }
+        return new RedirectView("/signup");
+        }
+
 
     @GetMapping("/login")
     public String showLoginForm(){
@@ -39,7 +47,7 @@ public class ApplicationUserController {
 
     @GetMapping("/signup")
     public String showSignUpForm(){
-        return "signup";
+        return "login";
     }
 
     @GetMapping("/users/{id}")
@@ -63,9 +71,9 @@ public class ApplicationUserController {
         return "myPreferences";
     }
 
-    @GetMapping("/reviews/{title}")
-    public String showProductReviews(@PathVariable String title, Principal p, Model m){
-        ArrayList<Products> reviewedProduct = productRepository.findByTitle(title);
+    @GetMapping("/reviews/{id}")
+    public String showProductReviews(@PathVariable long id, Principal p, Model m){
+        Products reviewedProduct = productRepository.findById(id).get();
         m.addAttribute("reviewedProduct", reviewedProduct);
         return "reviews";
     }

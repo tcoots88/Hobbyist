@@ -52,3 +52,7 @@ reviews VARCHAR(255)
 
 ##### Link to Wireframe
 https://balsamiq.cloud/shrn0hl/pd0wc07/r2278
+
+## To Run
+- You download this project on your local machine and enter the command ./gradlew run
+- This project is deployed on [heroku](https://java-hobbyist.herokuapp.com/)
