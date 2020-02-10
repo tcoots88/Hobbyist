@@ -45,6 +45,8 @@ public class ProductController {
         return new RedirectView("/myPreferences");
     }
 
+    // Code Review
+    // maybe consider adding a description for the below post mapping, the way it is set up is very interesting but can be confusing
 
     @PostMapping("/myPreferences")
     public RedirectView createUserPreferences(String img, String title, String productDescription, Principal p, Model m, boolean Bonsai, boolean WoodWorking, boolean Pyrography, boolean Bonkei, boolean Fitness, boolean Sewing, boolean CandleMaking, boolean JewelryMaking, boolean Puzzles, boolean EssentialOils, boolean LockPicking, boolean LeatherWorking, boolean Tea , boolean Soccer, boolean Knitting, boolean Hiking) {

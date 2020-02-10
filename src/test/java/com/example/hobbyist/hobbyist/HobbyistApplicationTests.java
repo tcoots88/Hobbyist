@@ -26,7 +26,8 @@ class CodefellowshipApplicationTests {
 	void contextLoads() {
 
 	}
-
+//Code Review
+// More Tests are needed, such as testing getters and integration testing
 	@Test
 	public void shouldHaveAGoodHomePage() throws Exception {
 		this.mockMvc.perform(get("/"))

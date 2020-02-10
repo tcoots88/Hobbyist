@@ -1,5 +1,7 @@
 package com.example.hobbyist.hobbyist.models;
-
+// Code Review Below
+// Application User Controller is in Models, for better organization try placing in controller folder.
+// Bug found when trying to move application controller to controller folder, this will need to be relooked at
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

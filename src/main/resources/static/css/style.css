@@ -1,4 +1,6 @@
 /*Gradient Background*/
+
+/*Code Review: There is no mobile view for this app, may be beneficial to customers to be able to view mobile */
 body {
    background: white;
    background-size: 400% 800%;
