@@ -34,6 +34,9 @@ public class Review {
 
         }
 
+        //ability for users to add their own reviews
+    //ability for users to also have the ability to add ratings as well
+
     //GETTERS
     public long getId() {
         return id;
