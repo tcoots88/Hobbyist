@@ -14,8 +14,9 @@ public class Products {
 
     String img;
     String ProductReview;
+   // code review below
+   // hard coded reviews in product should be made dynamic
 
-    
    public static List<Products> productsList = new ArrayList<Products>();
 
     static {
@@ -55,8 +56,8 @@ public class Products {
     @OneToMany(cascade = CascadeType.ALL, mappedBy=  "products")
     private Set<Review> reviews;
 
-
-
+ // Code Review
+ // Duplicate work here you could use one constructor here and just leave the application user null to start
 
     public Products(String img, String title, String productDescription, String ProductReview){
         this.img = img;

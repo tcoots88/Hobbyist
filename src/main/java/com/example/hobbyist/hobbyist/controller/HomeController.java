@@ -24,6 +24,8 @@ public class HomeController {
         }
         return "home";
     }
+    // Code Review Below
+    // consider putting products getMapping in the products controller
 
     @GetMapping("/products")
     public String products(Model m) {

@@ -2,6 +2,9 @@ package com.example.hobbyist.hobbyist.models;
 
 import javax.persistence.*;
 import java.util.List;
+// Code Review below
+// Review is not properly working, Recomended to set up so that users can leave a review, and remove them from the product constructor
+// Also consider using the review button to be able to view all products
 
 @Entity
 public class Review {
